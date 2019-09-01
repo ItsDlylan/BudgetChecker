@@ -1,28 +1,32 @@
 
     //BUDGET CONTROLLER
 let budgetController = (function () {
-
+    //Function Constructor for the Expenses that includes the ID, Description, and Value Data
     let Expense = function(id, description, value){
         this.id = id
         this.description = description
         this.value = value
     }
-
+    //Function Constructor for the Income that includes the ID, Description, and Value Data
     let Income = function(id, description, value){
         this.id = id
         this.description = description
         this.value = value
     }
-
+    // Function to calculate the Total of one type, Income or Expense by grabing the data of the type and running it through a
+    // For each Loop wihth the current item and adding the sum with the current value by += 
     let calculateTotal =function (type){
         let sum = 0
-
+        //data.allItems[type] type being 'ex' or 'inc' Look at line 27 to see the array
         data.allItems[type].forEach(function(cur){
+            
             sum += cur.value
         })
+       //edits our Data.totals for the type 'exp' or 'inc' on line 34  
         data.totals[type] = sum
     }
 
+    //Our data 
     let data = {
         allItems: {
             exp: [],
@@ -32,15 +36,17 @@ let budgetController = (function () {
             exp: 0,
             inc: 0
         },
-        budget: 0,
+        budget:  0,
         percentage: -1
     }
 
     return {
+        //Adds item to the budget Controller by grabbing the type "exp" or 'inc' the desc and the value
         addItem: function(type, des, val){
             let newItem
 
-            //Create New ID
+            //Create New ID by grabing the data of the type with the length of all the Items in that totals, 
+            //then checking the id and adding 1.
             if(data.allItems[type].length > 0){
                 ID = data.allItems[type][data.allItems[type].length - 1].id + 1
             } else{
@@ -59,13 +65,32 @@ let budgetController = (function () {
             //Return the new element
             return newItem
         },
+        //Deletes the Item from our dataStructure used for when we click the X icon.
+        deleteItem: function(type, id){
+            let ids, index
+            
+            ids = data.allItems[type].map(function(current) { //Map returns a whole new array. forEach does not 
+                return current.id;
+            })
+            //sets index to the index of the current id
+            index = ids.indexOf(id)
 
+            if(index !== -1){
+                //splice is used  to remove elements
+                //goes into the all items inside of the type 'exp' or 'inc' and removes it.
+                //spice takes 2 arguments, Where to start and how many to remove. 
+                //In this case we start at the index that we found on line 76 then we removedjust 1 aka being that index.
+                data.allItems[type].splice(index, 1)
+            }
+        },
+        //Method to calculate the Budget based on all the totals.
         calculateBudget: function(){
 
             //calculate total income and expsenses
+            //Uses Calculate total from line 17 
             calculateTotal('exp')
             calculateTotal('inc')
-            //Calculate the budget (income - expsenses)
+            //Calculate the budget (income - expenses)
             data.budget = data.totals.inc - data.totals.exp
             // Calculate the percentage of income that we spent 
             if (data.totals.inc > 0) {
@@ -73,12 +98,10 @@ let budgetController = (function () {
             } else {
                 data.percentage = -1;
             }    
-
-
             //Expense = 100 and income = 200, spent 50% = 100/200 = .5 * 100
 
         },
-
+        //Get Budget by returning the data above to use in our Global Controller.
         getBudget: function(){
             return {
                 budget: data.budget,
@@ -87,7 +110,7 @@ let budgetController = (function () {
                 percentage: data.percentage
             }
         },
-
+        //Using for Dev testing 
         testing: function(){
             console.log(data)
         }
@@ -143,6 +166,13 @@ let UIController = (function(){
             document.querySelector(element).insertAdjacentHTML('beforeend', newHTML)
 
         },
+
+        deleteListItem: function(selectorID){
+            let el = document.getElementById(selectorID);
+            //remove child is a cool way to delete from the dom
+            el.parentNode.removeChild(el)
+        },
+
         clearFields: function(){
             let fields, fieldsArr
            fields = document.querySelectorAll(DOMstrings.inputDescription + ',' + DOMstrings.inputValue)
@@ -246,14 +276,14 @@ let controller = (function(budgetCtrl, UICtrl) {
 
             splitID = itemID.split('-')
             type = splitID[0]
-            ID = splitID[1]
+            ID = parseInt(splitID[1])
 
             // delete item from data structure
-
+            budgetCtrl.deleteItem(type, ID)
             // delete item from UI
-
+            UICtrl.deleteListItem(itemID)
             //Update and show the new budget
-
+            updateBudget()
         }
 
     }
