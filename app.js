@@ -192,6 +192,8 @@ let UIController = (function(){
         }
     }
 
+
+
     return {
         getInput: function(){
 
@@ -249,7 +251,7 @@ let UIController = (function(){
 
             if(obj.budget >= 0 ) {
                 document.querySelector(DOMstrings.budgetLabel).textContent =  formatNumber(obj.budget, type)
-                document.querySelector(DOMstrings.budgetLabel).style.color = "#28B9B5";
+                document.querySelector(DOMstrings.budgetLabel).style.color = "##54dad6";
                 
             } else {
                 document.querySelector(DOMstrings.budgetLabel).textContent =  formatNumber(obj.budget, type)
@@ -409,6 +411,7 @@ let controller = (function(budgetCtrl, UICtrl) {
     }
 
 
+    
     return {
         init: function(){
             console.log('Application has started.')
@@ -417,9 +420,10 @@ let controller = (function(budgetCtrl, UICtrl) {
                 budget: 0,
                 totatlInc: 0,
                 totatlExp: 0,
-                percentage: -1
+                percentage: -1,
             })
             setupEventListeners()
+
         }
 
     }

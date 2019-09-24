@@ -5,10 +5,55 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
         <link type="text/css" rel="stylesheet" href="style.css">
-        <title>Budgety</title>
+        <title>Budget Checker</title>
     </head>
-    <body>
-        
+    <body id="body">
+        <div class="home" id="home">
+            
+            <div class="home__main">
+                <div class="home__container">
+                    <div class="home__left">
+                        <div class="home__left--pie">
+                            <img src="" alt="" class="home__left--pie__top">
+                            <img src="" alt="" class="home__left--pie__bottom">
+                        </div>
+                   
+                        <h1 class="home__left--main-text">Check yourself before you wreck yourself</h1>
+                    
+
+                    
+                    <h3 class="home__left--sub-text" style=" display: inline-block">
+                        Check your monthly budget and take back your finances <strong style="position:relative; top:6px;">Today!</strong>       
+                    </h3>
+                        <a class="home__left--calculate-btn" href="javascript:void(0);" 
+                        onclick="window.scroll(0,940); 
+                            
+                            document.querySelector('#body').style.overflow = 'visible';
+                            document.querySelector('#body').style.overflowY = 'visible';
+                            setTimeout(function(){document.querySelector('#home').style.display = 'none'}, 1000);
+                            
+                        ">
+                        Calculate</a>
+
+                    </div>
+                    
+                    <div class="home__right">
+                        <h1 class="home__title" >Budget Checker</h1>
+                        <img class="home__savings-svg" src="savings.svg" style="position: initial; margin-top:500px; margin-left: 250px;">
+                        
+                    </div>
+                </div> 
+            </div>        
+
+
+
+
+
+
+
+
+        </div>
+        <div class="budget-container">
         <div class="top">
             <div class="budget">
                 <div class="budget__title">
@@ -27,7 +72,7 @@
                 
                 <div class="budget__expenses clearfix">
                     <div class="budget__expenses--text">Expenses</div>
-                    <div class="right clearfix">
+                    <div class="right clearfix" >
                         <div class="budget__expenses--value">- 42</div>
                         <div class="budget__expenses--percentage">&nbsp; %</div>
                     </div>
@@ -45,7 +90,7 @@
                         <option value="exp">-</option>
                     </select>
                     <input type="text" class="add__description" placeholder="Add description">
-                    <input type="number" class="add__value" placeholder="Value">
+                    <input type="number" class="add__value" placeholder="Value" min="1" onkeydown="return event.keyCode !== 69">
                     <button class="add__btn"><i class="ion-ios-checkmark-outline"></i></button>
                 </div>
             </div>
@@ -118,7 +163,31 @@
             
             
         </div>
-        
+    </div>
+    <script>
+    //     //     // window.onscroll = function () { window.scrollTo(0, 0); };    
+    //     //     function disableScrolling(){
+    //     //     var x=window.scrollX;
+    //     //     var y=window.scrollY;
+    //     //     window.onscroll=function(){window.scrollTo(x, y);};
+    //     // }
+    
+    //     // function enableScrolling(){
+    //     // window.onscroll=function(){};
+    // }   
+    // disableScrolling()
+            </script>
+            
+            <!-- On Refresh go to the home page. -->
+            <script>
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+                document.body.scrollTop = 0; // For Safari
+            </script>
+            <script>
+                let checkPos = function (){
+
+                }
+            </script>
         <script src="app.js"></script>
     </body>
 </html>
