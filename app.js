@@ -1,5 +1,34 @@
+let debtController = (function (){
+    //Function Constructor for the Debt Page, includes the ID, Description, Total, title, dateDue
+    let Debt = function(id, description, total, title, dateDue, monthlyPay){
+        this.id = id
+        this.description = description
+        this.total = total
+        this.monthlyPay = monthlyPay
+        this.title = title
+        this.dateDue = dateDue 
+    }
 
-    //BUDGET CONTROLLER
+
+    let data = {
+        allItems: [],
+        totals: [],
+        debt: 0,
+        monthlyPayment: 0,
+        monthsTill: 0
+    }
+    return{
+                //Using for Dev testing 
+            testing: function(){
+                console.log(data)
+            }
+    }
+})()
+let debtUIController = (function(){
+
+})()
+   
+   //BUDGET CONTROLLER
 let budgetController = (function () {
     //Function Constructor for the Expenses that includes the ID, Description, and Value Data
     let Expense = function(id, description, value){
@@ -159,8 +188,6 @@ let UIController = (function(){
         container: '.container',
         expensesPercLabel: '.item__percentage',
         dateLabel: '.budget__title--month'
-
-
     }
 
     let formatNumber = function(num,type){
@@ -233,7 +260,7 @@ let UIController = (function(){
 
         clearFields: function(){
             let fields, fieldsArr
-           fields = document.querySelectorAll(DOMstrings.inputDescription + ',' + DOMstrings.inputValue)
+            fields = document.querySelectorAll(DOMstrings.inputDescription + ',' + DOMstrings.inputValue)
 
             fieldsArr = Array.prototype.slice.call(fields)
 
@@ -326,8 +353,19 @@ let UIController = (function(){
 
 })()
 
+
+// Side Nav Active Controller
+let navController = (function(){
+    let navdebt = document.querySelector('#nav_debt')
+    let navhome = document.querySelector('#nav_home')
+    let navbud = document.querySelector('#nav_budget')
+
+})()
+
+
+
     //GLOBAL APP CONTROLLER
-let controller = (function(budgetCtrl, UICtrl) {
+let controller = (function(budgetCtrl, UICtrl, debtCtrl) {
 
     let setupEventListeners = function(){
         let DOM = UICtrl.getDOMstrings()
@@ -367,6 +405,21 @@ let controller = (function(budgetCtrl, UICtrl) {
         console.log(percentages)
     }
 
+    let ctrlDebtAddItem = function(){
+        let input, newitem
+        // 1. Get the field Input data
+
+        // 2. Add Item to the Debt Controller
+
+        // 3. Add the item to the UI
+
+        // 3.5 Clear the Fields
+
+        // 4 Update Debt (top)
+
+        // 5. Display the Budget on the UI
+
+    }
     let ctrlAddItem = function(){
         var input, newItem
         // 1. Get the Field Input data   
@@ -428,8 +481,7 @@ let controller = (function(budgetCtrl, UICtrl) {
 
     }
 
-})(budgetController, UIController)
+})(budgetController, UIController, debtController)
 
 controller.init()   //Without this code nothing will ever happen.
-
 
