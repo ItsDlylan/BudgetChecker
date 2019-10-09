@@ -22,7 +22,7 @@ body {
     height: 100vh;
     font-weight: 400;
     overflow: hidden;
-    overflow-y: none; 
+    overflow-y: hidden; 
 }
 
 html{
@@ -176,7 +176,10 @@ html{
 }
 
 .budget-container{
-    height: 100%;
+    height: 100vh;
+}
+.debt-container{
+    height: 100vh;
 }
 
 
@@ -205,24 +208,6 @@ END OF HOME
     position: relative;
  
     
-}
-
-.welcome{
-    position: relative;
-    top: 10%;
-    left: 10%;
-    width: 150px;
-    display:inline-block;
-    color: #fff;
-    
-}
-.lowercase{
-    text-transform: none;
-    position: absolute;
-    display: inline-block;
-    left: 18.7%;
-    color: #54dad6;
-    font-weight: 400;
 }
 
 .budget {
@@ -326,7 +311,10 @@ END OF HOME
 }
 
 .add__description,
-.add__value {
+.add__value, 
+.add__title,
+.total__due,
+.due__date{
     border: 1px solid #e7e7e7;
     background-color: #fff;
     color: inherit;
@@ -455,13 +443,268 @@ h2 {
 .item:hover .item__percentage { transform: translateX(-20px); }
 
 
-.unpaid {
-    background-color: #FFDAD9 !important;
-    cursor: pointer;
-    color: #FF5049;
 
+
+
+/* 
+    NAV BAR
+*/
+.startingPos{
+    left: -140px !important;
+}
+.nav_home-i{
+    top: 25% !important;
+    color: #e7e7e7;
+}
+.nav_debt-i{
+   color: #FF5049;
+}
+.nav_budget-i{
+    color: black;
+}
+.nav_icon{
+    position: absolute;
+    left: 73.5%;
+    top: 30%;
+    transform: scale(2);
+    display: block;
+}
+.nav a{
+    position: fixed;
+    left: -80px;   
+    width: 130px;
+    padding: 20px;
+    transition: 0.3s ease;
+    text-decoration: none;
+    font-size: 18px;
+    color:#000;
+    border-radius: 0 5px 5px 0;
+    z-index: 3;
 }
 
-.unpaid .item__percentage { box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1); }
-.unpaid:hover .item__description { font-weight: 900; }
+.nav a:hover{
+    left: 0;
+}
+
+#nav_home{
+    
+    top: 55%;
+    background-color: #54dad6;
+}
+#nav_debt{
+    top: 65%;
+    background-color: #54dad6;
+}
+#nav_budget{
+    top: 75%;
+    background-color: #54dad6;
+}
+
+
+
+
+
+/* 
+    Debt Page
+*/
+
+
+/* Top */
+.debt__top{
+    height: 40vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(back.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.debt__top--container{
+    position: absolute;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.debt__title{
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+.debt__value{
+    font-weight: 300;
+    font-size: 46px;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    color: #FF5049;
+}
+.debt__cards{
+   display: inline;
+}
+.debt__top--left,
+.debt__top--right{
+    position: absolute;
+    padding: 12px;
+    margin-top: -3px;
+    width: 100%;
+    background-color: #FF5049;
+    height: 90px;
+}
+.debt__top--left{
+    right: 11vw;
+}
+.debt__top--right{
+    left: 11vw;
+}
+.debt__left__monthly__payment,
+.debt__months__free{
+    text-align: center;
+}
+.debt__months__free__disclaimer{
+    font-size: 10px;
+    position: absolute;
+    /* right: 50%; */
+    top: 80%;
+    left: 0;
+    width:100%;
+}
+.debt__top--right__start{
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.debt__monthly--total{
+    position: absolute;
+    color: black;
+    font-size: 1.25rem;
+    display: inline;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.debt__left--title{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+}
+.debt__monthly--end{
+    position: absolute;
+    top:75%;
+    left:0;
+    width:100%;
+}
+
+.debt__right--months{
+    color: black;
+    top: 1px;
+    position: relative;
+}
+
+.due__date--label{
+    position:absolute;
+    top: 40.5%;
+    left: 64.5%;
+}
+.due__date::before{ 
+    content: "Due Date: ";
+    position: relative;
+    top:-.185px;
+    color:black;
+}
+#dueDate{
+    width:16%;
+}
+
+.add__title:focus,
+.add__description:focus,
+.total__due:focus,
+.due__date:focus {
+    outline: none;
+    border: 1px solid #FF5049;
+}
+
+
+
+/* Bottom Debt */
+.debt__bottom-title{
+    font-style: normal;
+    text-align:center;
+font-weight: normal;
+font-size: 26px;
+line-height: 30px;
+color: #FF5049;
+}
+.item-debt {
+    padding: 13px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.item-debt:first-child { border-top: 1px solid #FF5049; }
+.item-debt:nth-child(even) { background-color: #f7f7f7; }
+.item__title{
+    width: 25%;
+    position: relative;
+    bottom: -20px;
+}
+
+.middle{
+    width: 33%;
+    position: relative;
+    left: 40%;
+}
+
+.item__description{
+    text-align: center;
+    width: 300px;
+    display: inline-block;
+    position: relative;
+    top: -30px;
+    right: 55px;
+    color: black;
+}
+
+.item__total{
+    height: 10px;
+    position: relative;
+    top: 10px;
+    left: 60px;
+    color: #FF5049;
+}
+.debt__item-right{
+    float: right;
+}
+.item__dueDate{
+    display: inline-block;
+    transition: transform 0.3s;
+}
+.item__value-debt{
+    position: relative;
+    color: #FF5049;
+    left: 72px;
+    top: -45px;
+    transition: transform 0.3s;
+    float: left;
+
+}
+.item__delete-debt{
+    position: relative;
+    bottom: 23px;
+    left: 75px;
+}
+.item__delete--btn-debt{
+    color: #FF5049 !important;
+}
+.item-debt:hover .item__delete--btn { display: block; }
+.item-debt:hover .item__dueDate { transform: translateX(-27px); }
+.item-debt:hover .item__value-debt { transform: translateX(-22px); }
+
 
