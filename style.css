@@ -662,7 +662,7 @@ color: #FF5049;
     left: 40%;
 }
 
-.item__description{
+.debt-item__description{
     text-align: center;
     width: 300px;
     display: inline-block;
