@@ -28,7 +28,8 @@
                             document.querySelector('#body').style.overflowY = 'visible';
                             setTimeout(function(){
                             document.querySelector('#home').style.display = 'none';
-                            document.querySelector('#budget').style.display = 'none';
+                            document.querySelector('#debt').style.display = 'none';
+                            document.querySelector('#budget').style.display = 'block';
                             document.querySelector('#nav_debt').classList.toggle('startingPos');
                             document.querySelector('#nav_home').classList.toggle('startingPos');
                             document.querySelector('#nav_budget').classList.toggle('startingPos');
@@ -196,7 +197,7 @@
 
 
 
-        <div class="debt-container">
+        <div class="debt-container" id="debt">
             <div class="debt__top">
                 <div class="debt__top--container">
                     <div class="debt__title">
@@ -233,10 +234,10 @@
                 <div class="add">
                     <div class="add__container">
                         <input type="text" class="add__title" placeholder="Title">
-                        <input type="text" class="add__description" placeholder="Add description">
+                        <input type="text" class="add__description add__description-debt" placeholder="Add description">
                         <input type="number" class="total__due" placeholder="Total Due" min="1" onkeydown="return event.keyCode !== 69">
-                        <input type="month" class="due__date" name="dueDate" id="dueDate" min="2019-10">
-                        <button class="add__btn"><i class="ion-ios-checkmark-outline"></i></button>
+                        <input type="month" class="due__date" name="dueDate" id="dueDate" >
+                        <button class="add__btn debt__btn"><i class="ion-ios-checkmark-outline"></i></button>
                     </div>
                 </div>
                 

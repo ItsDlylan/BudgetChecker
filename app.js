@@ -4,28 +4,102 @@ let debtController = (function (){
         this.id = id
         this.description = description
         this.total = total
-        this.monthlyPay = monthlyPay
         this.title = title
         this.dateDue = dateDue 
     }
 
 
     let data = {
-        allItems: [],
+        allItems:[],
         totals: [],
         debt: 0,
-        monthlyPayment: 0,
-        monthsTill: 0
+        monthlyPayment: 0
     }
+    
     return{
-                //Using for Dev testing 
-            testing: function(){
-                console.log(data)
+        addItem: function(desc, total, title, dateDue){
+            let newItem
+
+            // Create New ID by grabing the data of the type with the length of all the Items in that totals, 
+            // then checking the id and adding 1.
+            if(data.allItems.length > 0){
+                ID = data.allItems[data.allItems.length - 1].id + 1
+            } else{
+                ID = 0
             }
+            newItem = new Debt(ID, desc, total, title, dateDue)
+            
+            //Push it into our data structure
+            data.allItems.push(newItem)
+            //Return the new element
+            console.log(newItem)
+            return newItem
+        },
+                //Using for Dev testing 
+        testing: function(){
+            console.log(data)
+        }
     }
 })()
 let debtUIController = (function(){
 
+    let DOMstrings = {
+        inputTitle: '.add__title',
+        inputDescription: '.add__description-debt',
+        inputTotal: '.total__due',
+        inputDate: '.due__date',
+        inputBtn: '.debt__btn'
+
+    }
+    let formatNumber = function(num,type){
+        let numSplit
+
+
+        num = Math.abs(num)
+        num = num.toFixed(2);
+
+        numSplit = num.split('.')
+
+        int = numSplit[0]
+
+        if(int.length > 3 ){
+            //substring allows us to take only a part of string 
+            int = int.substr(0,int.length - 3) + ',' + int.substr(int.length - 3, int.length) //Input 2310 = 2,300
+        }
+
+
+        dec = numSplit[1]
+
+        
+        return (type === 'exp' ? '-' : '+') + ' ' + int + '.' + dec
+    }
+
+    let nodeListForEach = function(list,callback){
+        for (var i = 0; i < list.length; i++){
+            callback(list[i], i)
+        }
+    }
+
+    return {
+        getInput: function(){
+
+            return {
+                title: document.querySelector(DOMstrings.inputTitle).value,
+                description: document.querySelector(DOMstrings.inputDescription).value,
+                total: parseFloat(document.querySelector(DOMstrings.inputTotal).value),
+                date: document.querySelector(DOMstrings.inputDate).value
+            }
+
+        },
+
+
+
+
+
+        getDOMstrings: function(){
+            return DOMstrings
+        }
+    }
 })()
    
    //BUDGET CONTROLLER
@@ -365,15 +439,18 @@ let navController = (function(){
 
 
     //GLOBAL APP CONTROLLER
-let controller = (function(budgetCtrl, UICtrl, debtCtrl) {
+let controller = (function(budgetCtrl, UICtrl, debtCtrl, debtUICtrl) {
 
     let setupEventListeners = function(){
         let DOM = UICtrl.getDOMstrings()
+        let debtDOM = debtUICtrl.getDOMstrings()
         document.querySelector(DOM.addButton).addEventListener('click', ctrlAddItem)
+        document.querySelector(debtDOM.inputBtn).addEventListener('click', ctrlDebtAddItem)
 
         document.addEventListener('keypress', function(event){
             if(event.keyCode === 13 || event.which === 13 ){
                 ctrlAddItem()
+                ctrlDebtAddItem()
             }
             
         })
@@ -408,14 +485,20 @@ let controller = (function(budgetCtrl, UICtrl, debtCtrl) {
     let ctrlDebtAddItem = function(){
         let input, newitem
         // 1. Get the field Input data
+        input = debtUIController.getInput()
 
-        // 2. Add Item to the Debt Controller
+        if(input.description !== "" && !isNaN(input.total) && !NaN(input.date) && input.title !== ""){
+            // 2. Add Item to the Debt Controller
+            newDebtItem = debtCtrl.addItem(input.description, input.total, input.title, input.date)
+            // 3. Add the item to the UI
+            
+            // 3.5 Clear the Fields
+            debtUICtrl.clearFields()
+            // 4 Update Debt (top)
+        }
+        
 
-        // 3. Add the item to the UI
 
-        // 3.5 Clear the Fields
-
-        // 4 Update Debt (top)
 
         // 5. Display the Budget on the UI
 
@@ -481,7 +564,7 @@ let controller = (function(budgetCtrl, UICtrl, debtCtrl) {
 
     }
 
-})(budgetController, UIController, debtController)
+})(budgetController, UIController, debtController, debtUIController)
 
 controller.init()   //Without this code nothing will ever happen.
 
