@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: default;
 }
 
 .clearfix::after {
@@ -31,6 +32,13 @@ html{
 
 
 
+/* 
+UNIVERSAL Toggle Class
+*/
+.displayNone{
+    display: none;
+}
+
 /**********************************************
 *** HOME
 **********************************************/
@@ -55,10 +63,24 @@ html{
     width:100%;
     border-bottom: 1px solid black;
 }
+.home__left:hover .home__left--pieTop{
+    transform: translateX(15px) translateY(-10px);
+}
+.home__left--pie{
+    position: absolute;
+    left: 4%;
+    top: 4%;
+}
+.home__left--pieTop{
+    position: relative;
+    transition: transform 0.3s;
+    left: 50.5%;
+    top: -1px;
+}
 .home__left--main-text{
     position: absolute;
     left: 120px;
-    top: 275px;
+    top: 305px;
     width: 612px;
     height: 259.69px;
     font-family: Open Sans;
@@ -71,53 +93,53 @@ html{
     text-align: center;
     text-transform: uppercase;
     color: #fff;
-    text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25)
+    cursor: default;
+    text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .home__left--sub-text{
     width: 571px;
     height: 153px;
     position: absolute;
     left: 145px;
-    top: 540px;
+    top: 560px;
     font-family: Open Sans;
     font-weight: 300;
     font-size: 36px;
     line-height: 36px;
     text-align: center;
     text-transform: uppercase;
-
+    cursor: default;
     color: #000;
-    text-shadow: 3px 4px 4px rgba(0,0,0, 0.3)
+    text-shadow: 3px 4px 4px rgba(0,0,0, 0.3);
 }
 .home__left--calculate-btn{
      background: #74c5c0;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 50px; 
-    position: absolute;
-    width: 303px;
-    height: 82.72px;
-    left: 280px;
-    top: 695px;
-    cursor: pointer; 
+     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     border-radius: 50px;
+     position: absolute;
+     width: 303px;
+     height: 82.72px;
+     left: 280px;
+     top: 715px;
+     cursor: pointer; 
     /* Text for button */
      font-family: Open Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 32px;
-    line-height: 32px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #000000;
-    outline:none; 
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-
-    transition: all .2s;
-    -webkit-animation: moveInBottom .5s ease-out .75s;
-    animation: moveInBottom .5s ease-out .75s;
-    -webkit-animation-fill-mode: backwards;
-    animation-fill-mode: backwards;
+     font-style: normal;
+     font-weight: bold;
+     font-size: 32px;
+     line-height: 32px;
+     text-align: center;
+     text-transform: uppercase;
+     color: #000000;
+     outline:none;
+     text-transform: uppercase;
+     text-decoration: none;
+     padding: 1.5rem 4rem;
+     transition: all .2s;
+     -webkit-animation: moveInBottom .5s ease-out .75s;
+     animation: moveInBottom .5s ease-out .75s;
+     -webkit-animation-fill-mode: backwards;
+     animation-fill-mode: backwards;
 }
 .home__left--calculate-btn:active{
     outline: none;
@@ -325,6 +347,18 @@ END OF HOME
     border-radius: 5px;
     transition: border 0.3s;
 }
+.add__description-debt{
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 12px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: border 0.3s;
+    width:400px;
+}
 
 .add__description { width: 400px;}
 .add__value { width: 100px;}
@@ -334,7 +368,7 @@ END OF HOME
     background: none;
     border: none;
     color: #54dad6;
-    cursor: pointer;
+    
     display: inline-block;
     vertical-align: middle;
     line-height: 1.1;
@@ -345,9 +379,16 @@ END OF HOME
 
 .add__type:focus,
 .add__description:focus,
-.add__value:focus {
+.add__value:focus{
     outline: none;
     border: 1px solid #54dad6;
+   
+}
+.add__type:hover,
+.add__description:hover,
+.add__value:hover,
+.add__btn i:hover{
+    cursor: pointer;
 }
 
 .add__btn:focus { outline: none; }
@@ -434,6 +475,9 @@ h2 {
     line-height: 1;
     display: none;
 }
+.item__delete--btn i {
+    cursor:pointer;
+}
 
 .item__delete--btn:focus { outline: none; }
 .item__delete--btn:active { transform: translateY(2px); }
@@ -452,13 +496,10 @@ h2 {
 .startingPos{
     left: -140px !important;
 }
-.nav_home-i{
-    top: 25% !important;
-    color: #e7e7e7;
-}
 .nav_debt-i{
    color: #FF5049;
 }
+
 .nav_budget-i{
     color: black;
 }
@@ -476,14 +517,20 @@ h2 {
     padding: 20px;
     transition: 0.3s ease;
     text-decoration: none;
+    border: 1px solid #54dad6;
     font-size: 18px;
     color:#000;
     border-radius: 0 5px 5px 0;
     z-index: 3;
 }
-
+.nav-active{
+    border-right: 1px solid black !important;
+    border-top: 1px solid black !important;
+    border-bottom: 1px solid black !important;
+}
 .nav a:hover{
     left: 0;
+    cursor:pointer;
 }
 
 #nav_home{
@@ -585,7 +632,7 @@ h2 {
     color: black;
     font-size: 1.25rem;
     display: inline;
-    top: 35%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -625,15 +672,34 @@ h2 {
 }
 
 .add__title:focus,
-.add__description:focus,
+.add__description-debt:focus,
 .total__due:focus,
 .due__date:focus {
     outline: none;
     border: 1px solid #FF5049;
+    
+}
+.add__title:hover,
+.add__description-debt:hover,
+.total__due:hover,
+.due__date:hover,
+.debt__btn i:hover{
+    cursor: pointer;
 }
 
-
-
+.debt__btn{
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: #FF5049;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.1;
+    margin-left: 10px;
+    outline:none;
+}
+.debt__btn:active { outline: none; transform: translateY(2px); }
 /* Bottom Debt */
 .debt__bottom-title{
     font-style: normal;
@@ -689,7 +755,8 @@ color: #FF5049;
 .item__value-debt{
     position: relative;
     color: #FF5049;
-    left: 72px;
+    /* left: 72px; */
+    left: 102px;
     top: -45px;
     transition: transform 0.3s;
     float: left;
@@ -697,14 +764,12 @@ color: #FF5049;
 }
 .item__delete-debt{
     position: relative;
-    bottom: 23px;
-    left: 75px;
+    bottom: 27px;
+    left: 121px;
 }
 .item__delete--btn-debt{
     color: #FF5049 !important;
 }
 .item-debt:hover .item__delete--btn { display: block; }
-.item-debt:hover .item__dueDate { transform: translateX(-27px); }
+.item-debt:hover .item__dueDate { transform: translateX(-22px); }
 .item-debt:hover .item__value-debt { transform: translateX(-22px); }
-
-

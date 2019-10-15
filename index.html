@@ -13,26 +13,28 @@
                 <div class="home__container">
                     <div class="home__left">
                         <div class="home__left--pie">
-                            <img src="" alt="" class="home__left--pie__top">
-                            <img src="" alt="" class="home__left--pie__bottom">
+                            <img class="home__left--pieTop" src="pieTop.svg" alt="TOP of Pie Chart">
+                            <img class="home__left--pieBottom" src="pieBottom.svg" alt="BOTTOM of Pie Chart">
                         </div>
                         <h1 class="home__left--main-text">Check yourself before you wreck yourself</h1>
                     <h3 class="home__left--sub-text" style=" display: inline-block">
                         Check your monthly budget and take back your finances <strong style="position:relative; top:6px;">Today!</strong>       
                     </h3>
                         <a class="home__left--calculate-btn" href="javascript:void(0);" 
-                        onclick="window.scroll(0,940); 
+                        onclick=" 
                             
                             
-                            document.querySelector('#body').style.overflow = 'visible';
-                            document.querySelector('#body').style.overflowY = 'visible';
+                            document.querySelector('#budget').classList.toggle('displayNone');
+                            document.querySelector('#debt').classList.toggle('displayNone');
+                            window.scroll(0,940);
                             setTimeout(function(){
-                            document.querySelector('#home').style.display = 'none';
-                            document.querySelector('#debt').style.display = 'none';
-                            document.querySelector('#budget').style.display = 'block';
+                            document.querySelector('#home').classList.toggle('displayNone');
                             document.querySelector('#nav_debt').classList.toggle('startingPos');
-                            document.querySelector('#nav_home').classList.toggle('startingPos');
+                            document.querySelector('#nav_debt').classList.toggle('nav-active');
                             document.querySelector('#nav_budget').classList.toggle('startingPos');
+                            document.querySelector('body').style.overflowY = 'initial';
+                            document.querySelector('body').style.overflow = 'initial';
+                            
                             },
                             450);
                             
@@ -50,25 +52,44 @@
             </div>        
         </div>
         <div class="nav" id="nav">
-                            <a id="nav_home" class="startingPos"
+                            <!-- <a id="nav_home" class="startingPos"
                             href="javascript:void(0);" 
                             onclick="
-                            window.scroll(0,0);
-                            // document.querySelector('#body').style.overflow = 'hidden';
-                            // document.querySelector('#body').style.overflowY = 'hidden';
-                            // document.querySelector('.home').style.display = 'block';
-                            // setTimeout(function(){
-                            // document.querySelector('.budget-container').style.display = 'none'
-                            // document.querySelector('.debt-container').style.display = 'none';}, 
-                            // 1000);
+                            document.querySelector('#home').classList.toggle('displayNone');
+                            window.scroll(0,940);
+                            setTimeout(function(){
+                                window.scroll(0,0);
+                            }, 1)
+                            
+                            document.querySelector('.nav').classList.toggle('displayNone');
+
+                            setTimeout(function(){
+                            // document.querySelector('#budget').classList.toggle('displayNone');
+                            document.querySelector('#debt').classList.toggle('displayNone');
+                            }, 450);
                             " 
                             > Home
                             <i class="ion-home nav_home-i nav_icon"></i>
-                            </a>
+                            </a> -->
                     
                             <a  id="nav_debt" class="startingPos"
                             href="javascript:void(0);" 
-                            onclick="window.scroll(0,940);" 
+                            onclick="
+                            let debt = document.querySelector('#nav_debt');
+                                if(!debt.classList.contains('nav-active')){
+                                    document.querySelector('#debt').classList.toggle('displayNone');
+                             document.querySelector('#nav_debt').classList.toggle('nav-active');
+                             document.querySelector('#nav_budget').classList.toggle('nav-active');
+                            setTimeout(function(){
+                                document.querySelector('#budget').classList.toggle('displayNone');
+                            }, 450)
+                                } else if (debt.classList.contains('nav-active')){
+                                
+                            return
+                                }
+
+                            
+                            " 
                             > Debt
                             <i class="ion-cash nav_debt-i nav_icon"></i>
                             </a>
@@ -76,14 +97,108 @@
                         
                             <a id="nav_budget" class="startingPos"
                             href="javascript:void(0);" 
-                            onclick="window.scroll(0,1860);" 
+                            onclick="
+                            let budget = document.querySelector('#nav_budget');
+                            if(!budget.classList.contains('nav-active')){
+                            document.querySelector('#budget').classList.toggle('displayNone');
+                            document.querySelector('#nav_debt').classList.toggle('nav-active');
+                            document.querySelector('#nav_budget').classList.toggle('nav-active');
+                            window.scroll(0,940);
+                            setTimeout(function(){
+                                
+                                document.querySelector('#debt').classList.toggle('displayNone');
+                            }, 450)
+                            } else{
+                                return
+                            }
+
+                            "
                             > Budget
                             <i class="ion-calculator nav_budget-i nav_icon"></i>
                             
                             </a>
         </div>
 
-            <div class="budget-container" id="budget">
+            
+
+
+
+        <div class="debt-container displayNone " id="debt">
+            <div class="debt__top">
+                <div class="debt__top--container">
+                    <div class="debt__title">
+                        Total Amount of Debt in <span class="debt__title--month">%Month%</span>:
+                    </div>
+                    
+                    <div class="debt__value"> - 14,956.24</div>
+                    
+                    <div class="debt__cards clearfix">
+                        <div class="debt__top--left">
+                            <div class="debt__left__monthly__payment"><span class="debt__left--title">Monthly Payment</span>
+                                <span class="debt__monthly--total"><br>- 241.71<br></span> 
+                                <span class="debt__monthly--end">of <span class="total"></span> different bills</span>
+                            </div>
+                            
+                        </div>
+                        <div class="debt__top--right">
+                                <div class="debt__months__free">
+                                    <span class="debt__top--right__start"><span style="font-size: 1.25rem;"><span class="debt__right--months">0</span> <span class="debt__right--monthVSmonths">Month</span> Till Debt Free<br></span></span>
+                                    <br><span class="debt__months__free__disclaimer">
+                                        **based on the monthly payment
+                                    </span>
+                                </div>
+                                
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+            <div class="debt__bottom">
+                <div class="add">
+                    <div class="add__container">
+                        <input type="text" class="add__title" placeholder="Title">
+                        <input type="text" class="add__description-debt" placeholder="Add description">
+                        <input type="number" class="total__due" placeholder="Total Due" min="1"  onkeydown="return event.keyCode !== 69">
+                        <input type="month" class="due__date" name="dueDate" id="dueDate" >
+                        <button class="debt__btn"><i class="ion-ios-checkmark-outline"></i></button>
+                    </div>
+                </div>
+                
+                <div class="container testing clearfix">
+                    <div class="debt">
+                        <h2 class="debt__bottom-title">DEBT</h2>
+                        
+                        <div class="debt__list">
+                            <!-- <div class="item-debt clearfix" id="debt-%id%">
+                                <div class="item__title">%title%
+
+                                </div>
+                                <div class="middle clearfix">
+                                <div class="debt-item__description">%description%</div>
+                                <div class="item__total"> %value%</div>
+                            </div>
+                            <div class="debt__item-right clearfix">
+                                <div class="item__dueDate ">%dueDate%
+
+                                </div>
+                                <div class="item__value-debt">%monthlyPayment%
+
+                                </div>
+                                <div class="item__delete item__delete-debt">
+                                    <button class="item__delete--btn item__delete--btn-debt"><i class="ion-ios-close-outline"></i></button></div></div></div>
+                             -->
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+    </div>
+    <div class="budget-container " id="budget">
             <div class="top">
                 <div class="budget">
                     <div class="budget__title">
@@ -125,34 +240,12 @@
                     </div>
                 </div>
                 
-                <div class="container clearfix">
+                <div class="container testingContainer clearfix">
                     <div class="income">
-                        <h2 class="icome__title">Income</h2>
+                        <h2 class="income__title">Income</h2>
                         
                         <div class="income__list">
-                        
-                            <!--
-                            <div class="item clearfix" id="income-0">
-                                <div class="item__description">Salary</div>
-                                <div class="right clearfix">
-                                    <div class="item__value">+ 2,100.00</div>
-                                    <div class="item__delete">
-                                        <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="item clearfix" id="income-1">
-                                <div class="item__description">Sold car</div>
-                                <div class="right clearfix">
-                                    <div class="item__value">+ 1,500.00</div>
-                                    <div class="item__delete">
-                                        <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            -->
-                            
+
                         </div>
                     </div>
                     
@@ -162,31 +255,7 @@
                         <h2 class="expenses__title">Expenses</h2>
                         
                         <div class="expenses__list">
-                        
-                            <!--
-                            <div class="item clearfix" id="expense-0">
-                                <div class="item__description">Apartment rent</div>
-                                <div class="right clearfix">
-                                    <div class="item__value">- 900.00</div>
-                                    <div class="item__percentage">21%</div>
-                                    <div class="item__delete">
-                                        <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="item clearfix" id="expense-1">
-                                <div class="item__description">Grocery shopping</div>
-                                <div class="right clearfix">
-                                    <div class="item__value">- 435.28</div>
-                                    <div class="item__percentage">10%</div>
-                                    <div class="item__delete">
-                                        <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            -->
-                            
                         </div>
                     </div>
                 </div>
@@ -195,100 +264,6 @@
             </div>
         </div>
 
-
-
-        <div class="debt-container" id="debt">
-            <div class="debt__top">
-                <div class="debt__top--container">
-                    <div class="debt__title">
-                        Total Amount of Debt in <span class="debt__title--month">%Month%</span>:
-                    </div>
-                    
-                    <div class="debt__value"> - 14,956.24</div>
-                    
-                    <div class="debt__cards clearfix">
-                        <div class="debt__top--left">
-                            <div class="debt__left__monthly__payment"><span class="debt__left--title">Monthly Payment</span>
-                                <span class="debt__monthly--total"><br>- 241.71<br></span> 
-                                <span class="debt__monthly--end">of %total% different bills</span>
-                            </div>
-                            
-                        </div>
-                        <div class="debt__top--right">
-                                <div class="debt__months__free">
-                                    <span class="debt__top--right__start"><span style="font-size: 1.25rem;"><span class="debt__right--months">%months%</span> Months till Debt Free<br></span></span>
-                                    <br><span class="debt__months__free__disclaimer">
-                                        **based on the monthly payment
-                                    </span>
-                                </div>
-                                
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-            
-            
-            
-            <div class="debt__bottom">
-                <div class="add">
-                    <div class="add__container">
-                        <input type="text" class="add__title" placeholder="Title">
-                        <input type="text" class="add__description add__description-debt" placeholder="Add description">
-                        <input type="number" class="total__due" placeholder="Total Due" min="1" onkeydown="return event.keyCode !== 69">
-                        <input type="month" class="due__date" name="dueDate" id="dueDate" >
-                        <button class="add__btn debt__btn"><i class="ion-ios-checkmark-outline"></i></button>
-                    </div>
-                </div>
-                
-                <div class="container clearfix">
-                    <div class="debt">
-                        <h2 class="debt__bottom-title">DEBT</h2>
-                        
-                        <div class="debt__list">
-                           
-                            
-                            <div class="item-debt clearfix" id="income-0">
-                                <div class="item__title">College Tuition</div>
-                                <div class="middle clearfix">
-                                    <div class="debt-item__description">Master's Degree</div>
-                                    <div class="item__total">- 56,700.00</div>
-
-                                </div>
-                                <div class="debt__item-right clearfix">
-                                    <div class="item__dueDate ">May 2020</div>
-                                    <div class="item__value-debt">- 262.00</div>
-                                    <div class="item__delete item__delete-debt">
-                                        <button class="item__delete--btn item__delete--btn-debt"><i class="ion-ios-close-outline"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="item-debt clearfix" id="income-1">
-                                <div class="item__title">Apple</div>
-                                <div class="middle clearfix">
-                                    <div class="debt-item__description">Bought MacBookPro 2019</div>
-                                    <div class="item__total">- &nbsp;2,300.00</div>
-
-                                </div>
-                                <div class="debt__item-right clearfix">
-                                    <div class="item__dueDate ">Oct 2020</div>
-                                    <div class="item__value-debt">- 112.00</div>
-                                    <div class="item__delete item__delete-debt">
-                                        <button class="item__delete--btn item__delete--btn-debt"><i class="ion-ios-close-outline"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                           
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                
-            </div>
-    </div>
-
             
             <!-- On Refresh go to the home page. -->
             <script>
@@ -296,11 +271,11 @@
                 document.body.scrollTop = 0; // For Safari
                 
             </script>
-            <script>
-                let checkPos = function (){
-
-                }
-            </script>
         <script src="app.js"></script>
     </body>
 </html>
+
+
+
+
+
