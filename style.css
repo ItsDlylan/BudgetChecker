@@ -801,7 +801,12 @@ MEDIA QUERIES
         display:none;
     }
 }
-@media(max-width: 376px){
+/* 2436x1125px at 458ppi */
+/* Iphone X, XR and iPhone 11Pro */
+@media only screen 
+    and (device-width: 375px) 
+    and (device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 3) { 
     .home{
         background: #47b8b1;
     }
@@ -835,8 +840,84 @@ MEDIA QUERIES
         line-height: 32px;
     }
 }
-/* 
-media querie for 375px width
-.debt--container, .budget--container{
-    margin-right: -30px;
-} */
+/* 2688x1242px at 458ppi */
+/* I phone 11 Pro MAX, iPhone Xs Max */
+@media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 3) { }
+
+/* 1792x828px at 326ppi */
+/* Iphone 11 iphone XR  */
+@media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 2) {
+        .home{
+            background: #47b8b1;
+        }
+        .home__left--main-text {
+            position: absolute;
+            top: 135px;
+            width: 250px;
+            left: 65px;
+            font-size: 38px;
+            line-height: 38px;
+            text-align: center;
+        }
+        .home__left--calculate-btn{
+        background: #FF5049;
+        position: relative;
+        left: 60px;
+        
+        top: 500px;
+        font-size: 25px;
+        }
+        .home__left--sub-text{
+            width: 300px;
+            position: relative;
+            left: 7.5%;
+            top: 394px;
+            height: 75px;
+            font-family: Open Sans;
+            font-weight: 300;
+            font-size: 24px;
+            text-transform: none;
+            line-height: 32px;
+        }
+     }
+
+@media(min-width: 414px){
+    .home{
+        background: #47b8b1;
+    }
+    .home__left--main-text {
+        position: absolute;
+        top: 135px;
+        width: 250px;
+        left: 65px;
+        font-size: 38px;
+        line-height: 38px;
+        text-align: center;
+    }
+    .home__left--calculate-btn{
+    background: #FF5049;
+    position: relative;
+    left: 60px;
+    
+    top: 500px;
+    font-size: 25px;
+    }
+    .home__left--sub-text{
+        width: 300px;
+        position: relative;
+        left: 7.5%;
+        top: 394px;
+        height: 75px;
+        font-family: Open Sans;
+        font-weight: 300;
+        font-size: 24px;
+        text-transform: none;
+        line-height: 32px;
+    }
+}
