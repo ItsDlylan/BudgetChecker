@@ -887,7 +887,8 @@ MEDIA QUERIES
         }
      }
 
-@media(min-width: 414px){
+@media(max-width: 414px){
+    .home__
     .home{
         background: #47b8b1;
     }
