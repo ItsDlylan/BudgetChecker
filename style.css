@@ -773,3 +773,70 @@ color: #FF5049;
 .item-debt:hover .item__delete--btn { display: block; }
 .item-debt:hover .item__dueDate { transform: translateX(-22px); }
 .item-debt:hover .item__value-debt { transform: translateX(-22px); }
+
+
+/* 
+
+MEDIA QUERIES
+
+ */
+/* setting the imgs on .home to none when the px is less than 1000 */
+@media (max-width: 1000px){
+    body{
+        position:fixed;
+    }
+    .home__main, .debt-container, .budget-container{
+        margin-right: -30px;
+        overflow: hidden;
+        overflow-y:hidden;
+    }
+    .home__title{
+        right:0;
+        left: 210px;
+        font-size: 30px;
+        line-height: 27px;
+        top:0;
+    }
+    .home__savings-svg, .home__left--pie{
+        display:none;
+    }
+}
+@media(max-width: 376px){
+    .home{
+        background: #47b8b1;
+    }
+    .home__left--main-text {
+        position: absolute;
+        top: 135px;
+        width: 250px;
+        left: 65px;
+        font-size: 38px;
+        line-height: 38px;
+        text-align: center;
+    }
+    .home__left--calculate-btn{
+    background: #FF5049;
+    position: relative;
+    left: 60px;
+    
+    top: 500px;
+    font-size: 25px;
+    }
+    .home__left--sub-text{
+        width: 300px;
+        position: relative;
+        left: 7.5%;
+        top: 394px;
+        height: 75px;
+        font-family: Open Sans;
+        font-weight: 300;
+        font-size: 24px;
+        text-transform: none;
+        line-height: 32px;
+    }
+}
+/* 
+media querie for 375px width
+.debt--container, .budget--container{
+    margin-right: -30px;
+} */
