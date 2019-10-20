@@ -927,11 +927,11 @@ MEDIA QUERIES
             height: 100vh;
             width:100%;
         }
-        .home__title{
+        /* .home__title{
             top: 80px !important;
             left: 190px !important;
             position:relative;
-        }
+        } */
         .home__left--main-text {
             position: absolute;
             top: 135px;
