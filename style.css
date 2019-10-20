@@ -930,6 +930,7 @@ MEDIA QUERIES
         .home__title{
             top: 80px !important;
             left: 190px !important;
+            position:relative;
         }
         .home__left--main-text {
             position: absolute;
