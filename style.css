@@ -846,7 +846,38 @@ MEDIA QUERIES
     and (device-width: 414px) 
     and (device-height: 896px) 
     and (-webkit-device-pixel-ratio: 3) { 
+        .home{
+            background: #47b8b1;
+        }
+        .home__left--main-text {
+            position: absolute;
+            top: 135px;
+            width: 250px;
+            left: 65px;
+            font-size: 38px;
+            line-height: 38px;
+            text-align: center;
+        }
+        .home__left--calculate-btn{
+        background: #FF5049;
+        position: relative;
+        left: 60px;
         
+        top: 500px;
+        font-size: 25px;
+        }
+        .home__left--sub-text{
+            width: 300px;
+            position: relative;
+            left: 7.5%;
+            top: 394px;
+            height: 75px;
+            font-family: Open Sans;
+            font-weight: 300;
+            font-size: 24px;
+            text-transform: none;
+            line-height: 32px;
+        }
     }
 
 /* 1792x828px at 326ppi */
