@@ -845,7 +845,9 @@ MEDIA QUERIES
 @media only screen 
     and (device-width: 414px) 
     and (device-height: 896px) 
-    and (-webkit-device-pixel-ratio: 3) { }
+    and (-webkit-device-pixel-ratio: 3) { 
+        
+    }
 
 /* 1792x828px at 326ppi */
 /* Iphone 11 iphone XR  */
@@ -888,7 +890,6 @@ MEDIA QUERIES
      }
 
 @media(max-width: 414px){
-    .home__
     .home{
         background: #47b8b1;
     }
