@@ -791,7 +791,6 @@ MEDIA QUERIES
         overflow-y:hidden;
     }
     .home__title{
-        right:0;
         left: 210px;
         font-size: 30px;
         line-height: 27px;
@@ -808,8 +807,11 @@ MEDIA QUERIES
     and (device-height: 812px) 
     and (-webkit-device-pixel-ratio: 3) { 
         body{
+            position: fixed;
             width: 375px;
             height:812px;
+            overflow:hidden;
+            overflow-y:hidden;
         }
         .home{
             background: #47b8b1;
@@ -854,11 +856,15 @@ MEDIA QUERIES
     and (-webkit-device-pixel-ratio: 3) { 
         .home__title{
             top: 80px;
+            z-index: 2;
             left: 190px;
         }
         body{
             width: 414px;
             height:896px;
+            position: fixed;
+            overflow:hidden;
+            overflow-y:hidden;
         }
         .home{
             background: #47b8b1;
@@ -905,6 +911,9 @@ MEDIA QUERIES
         body{
             width: 414px;
             height:896px;
+            position: fixed;
+            overflow:hidden;
+            overflow-y:hidden;
         }
         .home{
             background: #47b8b1;
@@ -949,7 +958,9 @@ MEDIA QUERIES
     }
     body{
         width: 414px;
-        height:812px;
+        position: fixed;
+        overflow:hidden;
+        overflow-y:hidden;
     }
     .home{
         background: #47b8b1;
