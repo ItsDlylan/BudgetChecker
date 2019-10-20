@@ -847,8 +847,8 @@ MEDIA QUERIES
     and (device-height: 896px) 
     and (-webkit-device-pixel-ratio: 3) { 
         .home__title{
-            top: 50px !important;
-            left: 190px !important;
+            top: 50px;
+            left: 190px;
         }
         .home{
             background: #47b8b1;
@@ -857,7 +857,7 @@ MEDIA QUERIES
             position: absolute;
             top: 135px;
             width: 250px;
-            left: 65px;
+            left: 80px;
             font-size: 38px;
             line-height: 38px;
             text-align: center;
@@ -926,8 +926,8 @@ MEDIA QUERIES
 
 @media(max-width: 414px){
     .home__title{
-        top: 50px !important;
-        left: 190px !important;
+        top: 50px;
+        left: 190px;
     }
     .home{
         background: #47b8b1;
@@ -936,10 +936,11 @@ MEDIA QUERIES
         position: absolute;
         top: 135px;
         width: 250px;
-        left: 65px;
+        
         font-size: 38px;
         line-height: 38px;
         text-align: center;
+        left: 80px;
     }
     .home__left--calculate-btn{
     background: #FF5049;
