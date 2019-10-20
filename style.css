@@ -847,7 +847,7 @@ MEDIA QUERIES
     and (device-height: 896px) 
     and (-webkit-device-pixel-ratio: 3) { 
         .home__title{
-            top:40px;
+            top:40px !important;
         }
         .home{
             background: #47b8b1;
@@ -924,6 +924,9 @@ MEDIA QUERIES
      }
 
 @media(max-width: 414px){
+    .home__title{
+        top:40px;
+    }
     .home{
         background: #47b8b1;
     }
