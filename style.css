@@ -901,10 +901,7 @@ MEDIA QUERIES
     and (device-width: 414px) 
     and (device-height: 896px) 
     and (-webkit-device-pixel-ratio: 3) { 
-        .home__title{
-            top: 80px !important;
-            left: 190px !important;
-        }
+
         body{
             width: 414px;
             height:896px;
@@ -913,9 +910,13 @@ MEDIA QUERIES
             overflow-y:hidden;
         }
         .home{
-            background: pink;
+            background: #47B8B1;
             height: 100vh;
             width:100%;
+        }
+        .home__title{
+            top: 80px !important;
+            left: 190px !important;
         }
         .home__left--main-text {
             position: absolute;
