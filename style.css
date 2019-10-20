@@ -807,9 +807,15 @@ MEDIA QUERIES
     and (device-width: 375px) 
     and (device-height: 812px) 
     and (-webkit-device-pixel-ratio: 3) { 
-    .home{
-        background: #47b8b1;
-    }
+        body{
+            width: 375px;
+            height:812px;
+        }
+        .home{
+            background: #47b8b1;
+            height: 100vh;
+            width:100%;
+        }
     .home__left--main-text {
         position: absolute;
         top: 135px;
@@ -850,8 +856,14 @@ MEDIA QUERIES
             top: 80px;
             left: 190px;
         }
+        body{
+            width: 414px;
+            height:896px;
+        }
         .home{
             background: #47b8b1;
+            height: 100vh;
+            width:100%;
         }
         .home__left--main-text {
             position: absolute;
@@ -890,8 +902,14 @@ MEDIA QUERIES
     and (device-width: 414px) 
     and (device-height: 896px) 
     and (-webkit-device-pixel-ratio: 2) {
+        body{
+            width: 414px;
+            height:896px;
+        }
         .home{
             background: #47b8b1;
+            height: 100vh;
+            width:100%;
         }
         .home__left--main-text {
             position: absolute;
@@ -929,8 +947,14 @@ MEDIA QUERIES
         top: 80px;
         left: 190px;
     }
+    body{
+        width: 414px;
+        height:812px;
+    }
     .home{
         background: #47b8b1;
+        height: 100vh;
+        width:100%;
     }
     .home__left--main-text {
         position: absolute;
