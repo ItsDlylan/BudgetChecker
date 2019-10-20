@@ -975,6 +975,9 @@ MEDIA QUERIES
             overflow:hidden;
             overflow-y:hidden;
         }
+        .home__right{
+            width: auto;
+        }
         .home{
             background: #47b8b1;
             height: 100vh;
