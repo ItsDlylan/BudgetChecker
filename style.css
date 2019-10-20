@@ -335,7 +335,17 @@ END OF HOME
 .add__description,
 .add__value, 
 .add__title,
-.total__due,
+.total__due{
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 12px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: border 0.3s;
+}
 .due__date{
     border: 1px solid #e7e7e7;
     background-color: #fff;
@@ -346,6 +356,7 @@ END OF HOME
     margin-right: 10px;
     border-radius: 5px;
     transition: border 0.3s;
+    height: 45px;
 }
 .add__description-debt{
     border: 1px solid #e7e7e7;
@@ -664,11 +675,13 @@ h2 {
 .due__date::before{ 
     content: "Due Date: ";
     position: relative;
-    top:-.185px;
+    left:10px;
+    top: 0px;
+    margin-right: 12px; 
     color:black;
 }
 #dueDate{
-    width:16%;
+    width:18%;
 }
 
 .add__title:focus,
