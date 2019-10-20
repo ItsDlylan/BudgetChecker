@@ -855,9 +855,8 @@ MEDIA QUERIES
     and (device-height: 896px) 
     and (-webkit-device-pixel-ratio: 3) { 
         .home__title{
-            top: 80px;
-            z-index: 2;
-            left: 190px;
+            top: 80px !important;
+            left: 190px !important;
         }
         body{
             width: 414px;
