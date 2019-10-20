@@ -795,7 +795,7 @@ MEDIA QUERIES
         left: 210px;
         font-size: 30px;
         line-height: 27px;
-        top:0;
+        top:40px;
     }
     .home__savings-svg, .home__left--pie{
         display:none;
@@ -847,7 +847,8 @@ MEDIA QUERIES
     and (device-height: 896px) 
     and (-webkit-device-pixel-ratio: 3) { 
         .home__title{
-            top:40px !important;
+            top: 50px !important;
+            left: 190px !important;
         }
         .home{
             background: #47b8b1;
@@ -925,7 +926,8 @@ MEDIA QUERIES
 
 @media(max-width: 414px){
     .home__title{
-        top:40px;
+        top: 50px !important;
+        left: 190px !important;
     }
     .home{
         background: #47b8b1;
