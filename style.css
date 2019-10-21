@@ -813,6 +813,72 @@ MEDIA QUERIES
         display:none;
     }
 }
+
+@media(max-width: 414px){
+    .home__title{
+        top: 80px;
+        left: 190px;
+        background: linear-gradient(to bottom, rgba(235, 86, 85, .5) 0%, rgba(235, 86, 85, .5) 50%, #3D93D7 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: absolute;
+        /* height: 90px; */
+        /* width: 178px; */
+        /* right: 60px; */
+        /* top: 25px; */
+        /* font-size: 40px; */
+        /* font-family: Open Sans; */
+        /* font-style: normal; */
+        /* font-weight: 800; */
+        /* line-height: 40px; */
+        /* display: flex; */
+        /* align-items: center; */
+        /* text-align: center; */
+        text-transform: uppercase;
+    }
+    body{
+        width: 414px;
+        position: fixed;
+        overflow:hidden;
+        overflow-y:hidden;
+    }
+    .home{
+        background: silver;
+        height: 100vh;
+        width:100%;
+    }
+    .home__left--main-text {
+        position: absolute;
+        top: 135px;
+        width: 250px;
+        
+        font-size: 38px;
+        line-height: 38px;
+        text-align: center;
+        left: 80px;
+    }
+    .home__left--calculate-btn{
+    background: #FF5049;
+    position: relative;
+    left: 60px;
+    
+    top: 500px;
+    font-size: 25px;
+    }
+    .home__left--sub-text{
+        width: 300px;
+        position: relative;
+        left: 7.5%;
+        top: 394px;
+        height: 75px;
+        font-family: Open Sans;
+        font-weight: 300;
+        font-size: 24px;
+        text-transform: none;
+        line-height: 32px;
+    }
+}
 /* 2436x1125px at 458ppi */
 /* Iphone X, XR and iPhone 11Pro */
 @media only screen 
@@ -861,53 +927,6 @@ MEDIA QUERIES
         line-height: 32px;
     }
 }
-@media(max-width: 414px){
-    .home__title{
-        top: 80px !important;
-        left: 190px !important;
-    }
-    body{
-        width: 414px;
-        position: fixed;
-        overflow:hidden;
-        overflow-y:hidden;
-    }
-    .home{
-        background: silver;
-        height: 100vh;
-        width:100%;
-    }
-    .home__left--main-text {
-        position: absolute;
-        top: 135px;
-        width: 250px;
-        
-        font-size: 38px;
-        line-height: 38px;
-        text-align: center;
-        left: 80px;
-    }
-    .home__left--calculate-btn{
-    background: #FF5049;
-    position: relative;
-    left: 60px;
-    
-    top: 500px;
-    font-size: 25px;
-    }
-    .home__left--sub-text{
-        width: 300px;
-        position: relative;
-        left: 7.5%;
-        top: 394px;
-        height: 75px;
-        font-family: Open Sans;
-        font-weight: 300;
-        font-size: 24px;
-        text-transform: none;
-        line-height: 32px;
-    }
-}
 /* 2688x1242px at 458ppi */
 /* I phone 11 Pro MAX, iPhone Xs Max */
 @media only screen 
@@ -928,8 +947,8 @@ MEDIA QUERIES
             width:100%;
         }
         .home__title{
-            top: 80px !important;
-            left: 190px !important;
+            top: 80px;
+            left: 190px;
             background: linear-gradient(to bottom, rgba(235, 86, 85, .5) 0%, rgba(235, 86, 85, .5) 50%, #3D93D7 50%);
             background-clip: text;
             -webkit-background-clip: text;
