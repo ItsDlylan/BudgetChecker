@@ -934,6 +934,7 @@ MEDIA QUERIES
         #home__title{
             position: absolute;
             top: 80px;
+            z-index: 10;
             left: 190px;
             background: linear-gradient(to bottom, rgba(235, 86, 85, .5) 0%, rgba(235, 86, 85, .5) 50%, #3D93D7 50%);
             background-clip: text;
