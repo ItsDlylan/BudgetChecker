@@ -938,7 +938,7 @@ MEDIA QUERIES
             background: linear-gradient(to bottom, rgba(235, 86, 85, .5) 0%, rgba(235, 86, 85, .5) 50%, #3D93D7 50%);
             background-clip: text;
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            /* -webkit-text-fill-color: transparent; */
             position: absolute;
             text-transform: uppercase;}
         .home__left--main-text {
