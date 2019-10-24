@@ -47,8 +47,8 @@ UNIVERSAL Toggle Class
     height:100vh;
     width: 100%;
     border-bottom: 1px solid black;
-    background: linear-gradient(to right, #ff4f49 0%, #ff4f49, 50% 50.05%, black 50.15%, #47b8b1 50.15%, #47B8B1 100%);
-    background: linear-gradient(to right, #ff4f49 50.05%, black 50.10%,  #47b8b1 50.15%);
+    /* background: linear-gradient(to right, #ff4f49 0%, #ff4f49, 50% 50.05%, black 50.15%, #47b8b1 50.15%, #47B8B1 100%); */
+     background: linear-gradient(to right, #ff4f49 50.05%, black 50.10%,  #47b8b1 50.15%); 
 }
 .home__container{
     width:100%;
@@ -929,13 +929,13 @@ MEDIA QUERIES
             overflow:hidden;
             overflow-y:hidden;}
         .home{
-            background-color: #47B8B1 !important;
+            background: #47B8B1 !important;
             height: 100vh;
             width:100%;}
         .home__title{
             top: 80px;
             left: 190px;
-            background-color: linear-gradient(to bottom, rgba(235, 86, 85, .5) 0%, rgba(235, 86, 85, .5) 50%, #3D93D7 50%);
+            background: linear-gradient(to bottom, rgba(235, 86, 85, .5) 0%, rgba(235, 86, 85, .5) 50%, #3D93D7 50%);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
