@@ -931,7 +931,7 @@ MEDIA QUERIES
             background: #47B8B1 !important;
             height: 100vh;
             width:100%;}
-        .home__title{
+        #home__title{
             position: absolute;
             top: 80px;
             left: 190px;
