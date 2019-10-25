@@ -819,7 +819,6 @@ MEDIA QUERIES
             overflow-y:hidden;}
             /* if using the viewport meta tag overflow and overflow-y on the body/html elements do not get seen so must be used on a wrapper. */
 .budget-container, .debt-container{
-    overflow: scroll;
     overflow-y: scroll;
 }
 /* ======= HOME ========= */
@@ -889,7 +888,7 @@ MEDIA QUERIES
 
 .debt__top--left{
     width: 45%;
-right: 5vw;}
+right: 0vw;}
 
 .debt__left--title{
     top: 5px;}
