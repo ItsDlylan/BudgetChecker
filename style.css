@@ -775,12 +775,12 @@ color: #FF5049;
 .item__delete-debt{
     position: relative;
     bottom: 27px;
-    left: 121px;
+    left: 107px;
 }
 .item__delete--btn-debt{
     color: #FF5049 !important;
 }
-.item-debt:hover .item__delete--btn { display: block; }
+.item-debt:hover .item__delete--btn { display: inline-block; }
 .item-debt:hover .item__dueDate { transform: translateX(-22px); }
 .item-debt:hover .item__value-debt { transform: translateX(-22px); }
 
@@ -810,23 +810,24 @@ MEDIA QUERIES
         display:none;
     }
 }
-@media  (max-width: 415px){ 
+@media  (max-width: 414px){ 
         body{
             width: 414px;
-            height:896px;
+            height:100vh;
             position: fixed;
             overflow:hidden;
             overflow-y:hidden;}
+            /* if using the viewport meta tag overflow and overflow-y on the body/html elements do not get seen so must be used on a wrapper. */
+
+/* ======= HOME ========= */
         .home{
-            height:896px;
-            width:414px;
-        }
+            height:100%;
+            width:414px;}
         #home__title{
             position: absolute;
             height: 60px;
             top: 10px;
-            left: 220px;  
-        }
+            left: 220px;}
         .home__left--main-text {
             position: absolute;
             top: 135px;
@@ -834,16 +835,13 @@ MEDIA QUERIES
             left: 80px;
             font-size: 38px;
             line-height: 38px;
-            text-align: center;
-        }
+            text-align: center;}
         .home__left--calculate-btn{
         background: #FF5049;
         position: relative;
         left: 60px;
-        
         top: 500px;
-        font-size: 25px;
-        }
+        font-size: 25px;}
         .home__left--sub-text{
             width: 300px;
             position: relative;
@@ -854,9 +852,130 @@ MEDIA QUERIES
             font-weight: 300;
             font-size: 24px;
             text-transform: none;
-            line-height: 32px;
-        }
-    }
+            line-height: 32px;}
+
+
+
+
+/* ======== DEBT ========= */
+.debt__top{
+    height: 50vh;}
+
+.debt__top--container{
+    position: relative;
+    width: auto;
+    height: 100%;
+    top: 0;
+     left: initial; 
+    transform: translate(0, 0);}
+
+.debt__title{
+    padding-top: 15%;
+    font-size: 20px;
+    position: relative;
+    width: 414px;}
+
+.debt__value{
+    width: 414px;
+    margin-top: 10%;
+    margin-bottom: 10%;}
+
+.debt__top--right{
+    width: 45%;
+    left: 0;}
+
+.debt__top--left{
+    width: 45%;
+right: 5vw;}
+
+.debt__left--title{
+    top: 5px;}
+
+.debt__monthly--end{
+    top: 73%;}
+
+/* Debt Bottom */
+
+.debt__bottom{
+    width:414px;}
+.add{
+    padding: 14px 0;
+}
+.add__container{
+    text-align: initial;
+}
+ .add__value, .add__title, .total__due, .due__date {
+font-size: 16px;
+margin-right: 25%;
+margin-left: 25%;
+margin-top:10px;
+}
+.add__description-debt{
+    font-size: 16px;
+    margin-left: 1.5%;
+    margin-top:10px;
+}
+.add__description-debt::placeholder, .add__value::placeholder, .total__due::placeholder, .add__title::placeholder{
+    text-align:center;
+}
+#dueDate{
+    width: auto;
+    margin-left: 18%;
+    margin-top:10px;
+}
+
+.debt__btn{
+    font-size: 40px;
+    position:relative;
+    left: 45%;
+    margin-top: 3%;
+}
+.item-debt{
+    width: 414px;
+}
+.container{
+    width:414px;
+}
+/* debt item */
+.item__title{
+    bottom: -30px;
+}
+.debt-item__description{
+    right: 117px;
+    width:300px;
+    top:-27px;
+}
+.item__total{
+    left: 0;
+    height:20px;
+    top: 32px;
+}
+.item__dueDate{
+    position: relative;
+    right: 20px;
+    top: 12px;
+}
+.item__value-debt{
+    left: 80px;
+    top: -63px;
+}
+.item__delete-debt{
+    bottom: 65px;
+    left:105px;
+}
+ .item__delete--btn-debt{
+    display:inline-block;
+    position:relative;
+
+    
+}
+.item-debt:hover .item__value-debt {transform: translateX(0) !important;}
+.item-debt:hover [class^="item__delete--btn"] { display: inline-block !important; }
+.item-debt:hover .item__dueDate { transform: translateX(0) !important; }
+
+
+/* Ending Bracket for media query max-width 415px */
+}
 
 /* 1792x828px at 326ppi */
 /* Iphone 11 iphone XR  */
