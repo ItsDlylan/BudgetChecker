@@ -914,8 +914,7 @@ MEDIA QUERIES
 /* 2688x1242px at 458ppi */
 /* Iphone 11 Pro MAX, iPhone Xs Max */
 @media  (device-width: 414px) 
-    and (device-height: 896px) 
-    and (-webkit-device-pixel-ratio: 3) { 
+    and (device-height: 896px)  { 
 
         body{
             width: 414px;
