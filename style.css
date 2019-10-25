@@ -932,8 +932,8 @@ MEDIA QUERIES
             width: 90px;
             overflow: initial;
             left: 190px;
-            background-clip: initial;
-            -webkit-background-clip: initial;
+            background-clip: text;
+            -webkit-background-clip: linear-gradient(to bottom, rgba(235, 86, 85, .5) 0%, rgba(235, 86, 85, .5) 50%, #3D93D7 50%);
             -webkit-text-fill-color: linear-gradient(to bottom, rgba(235, 86, 85, .5) 0%, rgba(235, 86, 85, .5) 50%, #3D93D7 50%);
             
 
