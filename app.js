@@ -781,7 +781,7 @@ let controller = (function(budgetCtrl, UICtrl, debtCtrl, debtUICtrl) {
 
         itemIDBud = event.target.parentNode.parentNode.parentNode.parentNode.id
         console.log(itemIDBud)
-        if (itemIDBud){
+        if (itemIDBud !== 'budget' && itemIDBud !== 'body' && itemIDBud !== ''){
 
             splitIDBud = itemIDBud.split('-')
             type = splitIDBud[0]
@@ -801,13 +801,14 @@ let controller = (function(budgetCtrl, UICtrl, debtCtrl, debtUICtrl) {
         itemID = event.target.parentNode.parentNode.parentNode.parentNode.id
         
 
-        if (itemID){
+        if (itemID !== 'debt' && itemID !== ''){
 
             splitID = itemID.split('-')
             
             ID = parseInt(splitID[1]);
+            console.log(itemID)
             debtCtrl.deleteItem(ID)
-
+            
             // delete item from UI
             debtUICtrl.deleteListItem(itemID)
 
