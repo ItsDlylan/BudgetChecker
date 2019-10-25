@@ -910,7 +910,7 @@ MEDIA QUERIES
     }
 }
 /* 2688x1242px at 458ppi */
-/* I phone 11 Pro MAX, iPhone Xs Max */
+/* Iphone 11 Pro MAX, iPhone Xs Max */
 @media  (device-width: 414px) 
     and (device-height: 896px) 
     and (-webkit-device-pixel-ratio: 3) { 
@@ -933,7 +933,7 @@ MEDIA QUERIES
             overflow: initial;
             left: 190px;
             background-clip: text;
-            -webkit-background-clip: text;
+            -webkit-background-clip: initial;
             color: transparent;
             
 
