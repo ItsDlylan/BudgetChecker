@@ -818,10 +818,6 @@ MEDIA QUERIES
     .home__title{
         top: 80px;
         left: 190px;
-        background: linear-gradient(to bottom, rgba(235, 86, 85, .5) 0%, rgba(235, 86, 85, .5) 50%, #3D93D7 50%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         position: absolute;
         text-transform: uppercase;
     }
@@ -936,6 +932,12 @@ MEDIA QUERIES
             width: 90px;
             overflow: initial;
             left: 190px;
+            background-clip: initial;
+            -webkit-background-clip: initial;
+            -webkit-text-fill-color: white;
+            
+
+            
         }
         .home__left--main-text {
             position: absolute;
