@@ -795,7 +795,7 @@ MEDIA QUERIES
     body{
         position:fixed;
     }
-    .home__main,{
+    .home__main{
         margin-right: -30px;
         overflow: hidden;
         overflow-y:hidden;
