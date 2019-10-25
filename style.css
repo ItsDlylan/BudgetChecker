@@ -832,11 +832,11 @@ MEDIA QUERIES
             z-index: 10;
             overflow: initial;
             left: 190px;
-            /* background-clip: text !important;
+             background-clip: text !important;
+            /*
             -webkit-text-fill-color: currentColor !important;
             -webkit-background-clip: text !important;
             color: transparent; */
-            color:transparent;
             border: 1px solid black;
 
             
