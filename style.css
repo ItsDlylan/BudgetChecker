@@ -900,7 +900,9 @@ right: 0vw;}
 /* Debt Bottom */
 
 .debt__bottom{
-    width:414px;}
+    width:414px;
+    overflow-y: scroll;
+}
 .add{
     padding: 14px 0;
 }
