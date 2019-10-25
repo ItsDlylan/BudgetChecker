@@ -913,7 +913,7 @@ right: 0vw;}
     text-align: initial;
 }
 .ion-ios-close-outline{
-    font-size: 28px;
+    font-size: 28px !important;
 }
  .add__value, .add__title, .total__due, .due__date {
 font-size: 16px;
