@@ -820,6 +820,7 @@ MEDIA QUERIES
             /* if using the viewport meta tag overflow and overflow-y on the body/html elements do not get seen so must be used on a wrapper. */
 .budget-container, .debt-container{
     overflow-y: scroll;
+    overflow-x:hidden;
 }
 /* ======= HOME ========= */
         .home{
