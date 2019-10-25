@@ -824,8 +824,8 @@ MEDIA QUERIES
         #home__title{
             position: absolute;
             height: 60px;
-            top: 80px;
-            left: 190px;    
+            top: 10px;
+            left: 220px;  
         }
         .home__left--main-text {
             position: absolute;
@@ -847,7 +847,7 @@ MEDIA QUERIES
         .home__left--sub-text{
             width: 300px;
             position: relative;
-            left: 7.5%;
+            left: 23.5%;
             top: 394px;
             height: 75px;
             font-family: Open Sans;
@@ -865,8 +865,7 @@ MEDIA QUERIES
             width: 414px;
             height:896px;
             position: fixed;
-            overflow:hidden;
-            overflow-y:hidden;
+
         }
         .home__right{
             width: auto;
@@ -874,6 +873,8 @@ MEDIA QUERIES
         .home{
             height: 100vh;
             width:100%;
+            overflow:hidden;
+            overflow-y:hidden;
         }
         .home__left--main-text {
             position: absolute;
