@@ -937,10 +937,7 @@ MEDIA QUERIES
             width: 90px;
             overflow: initial;
             left: 190px;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-transform: uppercase;}
+        }
         .home__left--main-text {
             position: absolute;
             top: 135px;
