@@ -913,8 +913,7 @@ MEDIA QUERIES
 }
 /* 2688x1242px at 458ppi */
 /* Iphone 11 Pro MAX, iPhone Xs Max */
-@media  (max-width: 414px) 
-    and (max-height: 896px)  { 
+@media  (min-width: 414px){ 
 
         body{
             width: 414px;
