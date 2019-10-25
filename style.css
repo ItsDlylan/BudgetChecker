@@ -836,7 +836,7 @@ MEDIA QUERIES
             -webkit-text-fill-color: currentColor !important;
             -webkit-background-clip: text !important;
             color: transparent; */
-            
+            border: 1px solid black;
 
             
         }
