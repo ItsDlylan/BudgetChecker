@@ -815,7 +815,7 @@ MEDIA QUERIES
         display:none;
     }
 }
-@media  (min-width: 414px){ 
+@media  (max-width: 414px){ 
         body{
             width: 414px;
             height:896px;
