@@ -795,7 +795,7 @@ MEDIA QUERIES
     body{
         position:fixed;
     }
-    .home__main, .debt-container, .budget-container{
+    .home__main,{
         margin-right: -30px;
         overflow: hidden;
         overflow-y:hidden;
@@ -818,7 +818,10 @@ MEDIA QUERIES
             overflow:hidden;
             overflow-y:hidden;}
             /* if using the viewport meta tag overflow and overflow-y on the body/html elements do not get seen so must be used on a wrapper. */
-
+.budget-container, .debt-container{
+    overflow: scroll;
+    overflow-y: scroll;
+}
 /* ======= HOME ========= */
         .home{
             height:100%;
