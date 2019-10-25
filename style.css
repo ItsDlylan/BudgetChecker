@@ -173,7 +173,7 @@ UNIVERSAL Toggle Class
 }
 .home__title{
     z-index: 10;
-    background: linear-gradient(to bottom, rgba(235, 86, 85, .5) 0%, rgba(235, 86, 85, .5) 50%, #3D93D7 50%);
+    background: linear-gradient(to bottom, rgb(235, 94, 94), #3D93D7 );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -832,10 +832,10 @@ MEDIA QUERIES
             overflow: initial;
             left: 190px;
             
-            color: linear-gradient(to bottom, rgba(235, 86, 85, .5) 0%, rgba(235, 86, 85, .5) 50%, #3D93D7 50%);
+            color: linear-gradient(to bottom, rgba(235, 86, 85, 0.5) 0%, rgba(235, 86, 85, 0.5) 50%, #3D93D7 50%);
             -webkit-text-fill-color: transparent;
-            -webkit-linear-gradient: (to bottom, rgba(235, 86, 85, .5) 0%, rgba(235, 86, 85, .5) 50%, #3D93D7 50%);
-            -o-linear-gradient: (to bottom, rgba(235, 86, 85, .5) 0%, rgba(235, 86, 85, .5) 50%, #3D93D7 50%);
+            -webkit-linear-gradient: (to bottom, rgba(235, 86, 85, 0.5) 0%, rgba(235, 86, 85, 0.5) 50%, #3D93D7 50%);
+            -o-linear-gradient: (to bottom, rgba(235, 86, 85, 0.5) 0%, rgba(235, 86, 85, 0.5) 50%, #3D93D7 50%);
             -webkit-background-clip: text;
 
             
