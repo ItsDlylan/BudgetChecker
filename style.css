@@ -933,7 +933,7 @@ MEDIA QUERIES
             overflow: initial;
             left: 190px;
             background-clip: text !important;
-            -webkit-background-clip: inherit!important;
+            -webkit-background-clip: initial !important;
             -webkit-text-fill-color: black !important;
             
 
