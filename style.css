@@ -903,6 +903,9 @@ right: 0vw;}
     width:414px;
     overflow-y: scroll;
 }
+.debt{
+    height: 50vh;
+}
 .add{
     padding: 14px 0;
 }
