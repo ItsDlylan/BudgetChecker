@@ -825,13 +825,14 @@ MEDIA QUERIES
             height:896px;
             width:414px;
         }
-        .home__title{
+        #home__title{
             position: absolute;
             top: 80px;
             z-index: 10;
             overflow: initial;
             left: 190px;
-            color: red;
+            
+            color: linear-gradient(to bottom, rgba(235, 86, 85, .5) 0%, rgba(235, 86, 85, .5) 50%, #3D93D7 50%);
             -webkit-text-fill-color: transparent;
             -webkit-linear-gradient: (to bottom, rgba(235, 86, 85, .5) 0%, rgba(235, 86, 85, .5) 50%, #3D93D7 50%);
             -o-linear-gradient: (to bottom, rgba(235, 86, 85, .5) 0%, rgba(235, 86, 85, .5) 50%, #3D93D7 50%);
