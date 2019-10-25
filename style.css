@@ -833,12 +833,11 @@ MEDIA QUERIES
             z-index: 10;
             overflow: initial;
             left: 190px;
-             background-clip: text !important;
-            /*
-            -webkit-text-fill-color: currentColor !important;
-            -webkit-background-clip: text !important;
-            color: transparent; */
-            border: 1px solid black;
+            color: red;
+            -webkit-text-fill-color: transparent;
+            background: -webkit-linear-gradient(to bottom, rgba(235, 86, 85, .5) 0%, rgba(235, 86, 85, .5) 50%, #3D93D7 50%);
+            background: -o-linear-gradient(to bottom, rgba(235, 86, 85, .5) 0%, rgba(235, 86, 85, .5) 50%, #3D93D7 50%);
+            -webkit-background-clip: text;
 
             
         }
