@@ -934,7 +934,7 @@ MEDIA QUERIES
             left: 190px;
             background-clip: initial;
             -webkit-background-clip: initial;
-            -webkit-text-fill-color: white;
+            -webkit-text-fill-color: linear-gradient(to bottom, rgba(235, 86, 85, .5) 0%, rgba(235, 86, 85, .5) 50%, #3D93D7 50%);
             
 
             
