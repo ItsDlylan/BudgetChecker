@@ -921,7 +921,7 @@ margin-top:10px;
     text-align:center;
 }
 #dueDate{
-    width: auto;
+    width: 250px;
     margin-left: 18%;
     margin-top:10px;
 }
@@ -929,7 +929,7 @@ margin-top:10px;
 .debt__btn{
     font-size: 40px;
     position:relative;
-    left: 45%;
+    /* left: 45%; */
     margin-top: 3%;
 }
 .item-debt{
