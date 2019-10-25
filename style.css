@@ -939,8 +939,13 @@ margin-top:10px;
     left:42vw;
     margin-top: 3%;
 }
+.debt__list{
+    overflow-x:hidden;
+    overflow:scroll;
+}
 .item-debt{
     width: 414px;
+    overflow-x:hidden;
 }
 .container{
     width:414px;
