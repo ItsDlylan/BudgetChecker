@@ -926,11 +926,11 @@ MEDIA QUERIES
             position: fixed;
             overflow:hidden;
             overflow-y:hidden;}
-        #home{
-            background-color: #47B8B1 !important;
-            height: 100vh;
-            width:100%;}
-        #home__title{
+        .home{
+            height:896px;
+            width:414px;
+        }
+        .home__title{
             position: absolute;
             top: 80px;
             z-index: 10;
