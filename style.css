@@ -932,9 +932,9 @@ MEDIA QUERIES
             width: 90px;
             overflow: initial;
             left: 190px;
-            background-clip: initial;
-            -webkit-background-clip: initial;
-            -webkit-text-fill-color: black;
+            background-clip: initial !important;
+            -webkit-background-clip: initial !important;
+            -webkit-text-fill-color: black !important;
             
 
             
