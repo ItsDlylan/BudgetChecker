@@ -816,54 +816,6 @@ MEDIA QUERIES
     }
 }
 
- @media(max-width: 414px){
-    .home__title{
-        top: 80px;
-        left: 190px;
-        position: absolute;
-        text-transform: uppercase;
-    }
-    body{
-        width: 414px;
-        position: fixed;
-        overflow:hidden;
-        overflow-y:hidden;
-    }
-    .home{
-        height: 100vh;
-        width:100%;
-    }
-    .home__left--main-text {
-        position: absolute;
-        top: 135px;
-        width: 250px;
-        
-        font-size: 38px;
-        line-height: 38px;
-        text-align: center;
-        left: 80px;
-    }
-    .home__left--calculate-btn{
-    background: #FF5049;
-    position: relative;
-    left: 60px;
-    
-    top: 500px;
-    font-size: 25px;
-    }
-    .home__left--sub-text{
-        width: 300px;
-        position: relative;
-        left: 7.5%;
-        top: 394px;
-        height: 75px;
-        font-family: Open Sans;
-        font-weight: 300;
-        font-size: 24px;
-        text-transform: none;
-        line-height: 32px;
-    }
-} 
 /* 2436x1125px at 458ppi */
 /* Iphone X, XR and iPhone 11Pro */
 @media only screen 
