@@ -185,8 +185,6 @@ UNIVERSAL Toggle Class
     font-style: normal;
     font-weight: 800;
     line-height: 40px;
-    display: flex;
-    align-items: center;
     text-align: center;
     text-transform: uppercase;
 }
