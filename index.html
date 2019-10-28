@@ -70,7 +70,7 @@
                 <div class="line"></div>
             </div>
             <ul class="nav-links">
-                <li >
+                <li class="">
                         <a id="nav_debt"
                         href="javascript:void(0);" 
                         onclick="
@@ -80,10 +80,15 @@
                         document.querySelector('#nav_debt').classList.toggle('nav-active');
                         document.querySelector('#nav_budget').classList.toggle('nav-active');
                         document.querySelector('.nav-links').classList.toggle('open');
+                        const links = document.querySelectorAll('.nav-links li');
+                        links.forEach(link =>{
+                        link.classList.toggle('fade');
+                            });
+                        
                         setTimeout(function(){
                         window.scroll(0,0);
                         document.querySelector('#budget').classList.toggle('displayNone');
-                        
+                        document.querySelector('nav-links li').classList.toggle('nav-active');
 
                         }, 450)} else if (debt.classList.contains('nav-active')){return}" 
                         > Debt
@@ -99,8 +104,12 @@
                         document.querySelector('#nav_debt').classList.toggle('nav-active');
                         document.querySelector('#nav_budget').classList.toggle('nav-active');
                         document.querySelector('.nav-links').classList.toggle('open');
+                        const links = document.querySelectorAll('.nav-links li');
+                        links.forEach(link =>{
+                        link.classList.toggle('fade');
+                            });
                         setTimeout(function(){document.querySelector('#debt').classList.toggle('displayNone');
-                         
+                        document.querySelectorAll('nav-links li a').classList.toggle('nav-active');
                         },200)}else{return}"
                         >Budget</a></li>
                         <!-- <i class="ion-calculator nav_budget-i nav_icon"></i> -->

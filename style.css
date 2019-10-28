@@ -515,8 +515,12 @@ nav{
 }
 
 .nav-links li a{
-    color: #FF5049;
+    color: #fff;
     text-decoration: none;
+
+}
+.nav-active {
+    border-bottom: 2px solid #fff;
 }
 @media screen and (max-width: 768px){
 
@@ -571,7 +575,6 @@ nav{
         font-size: 32px;
     }
     .nav-links li:nth-child(1){
-        padding-bottom: -500px;
         transition: all 0.5s ease 0.2s;
     }
     .nav-links li:nth-child(2){
