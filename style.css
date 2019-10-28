@@ -565,12 +565,13 @@ nav{
     }
     .nav-links li {
         opacity: 0;
-        
+
     }
     .nav-links li a {
         font-size: 32px;
     }
     .nav-links li:nth-child(1){
+        padding-bottom: -500px;
         transition: all 0.5s ease 0.2s;
     }
     .nav-links li:nth-child(2){
