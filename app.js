@@ -1,5 +1,15 @@
 let monthPayVar
 let monthlyPayForBudget
+const hamburger = document.querySelector('.hamburger')
+const navLinks = document.querySelector('.nav-links')
+const links = document.querySelectorAll('.nav-links li')
+hamburger.addEventListener('click', () =>{
+    navLinks.classList.toggle('open')
+    links.forEach(link =>{
+        link.classList.toggle('fade')
+    })
+})
+
 let debtController = (function (){
     //Function Constructor for the Debt Page, includes the ID, Description, Total, title, dateDue
     let Debt = function(id, description, total, title, dateDue, monthlyPayment){
@@ -800,9 +810,9 @@ let controller = (function(budgetCtrl, UICtrl, debtCtrl, debtUICtrl) {
 
         itemID = event.target.parentNode.parentNode.parentNode.parentNode.id
         
-
-        if (itemID !== 'debt' && itemID !== ''){
-
+        
+        if (itemID !== 'debt' && itemID !== '' && itemID !== 'body'){
+            console.log(itemID)
             splitID = itemID.split('-')
             
             ID = parseInt(splitID[1]);

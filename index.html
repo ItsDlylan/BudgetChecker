@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
         <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
         <link href="node_modules/normalize.css/normalize.css" rel="stylesheet" type="text/css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link type="text/css" rel="stylesheet" href="style.css">
         <title>Budget Checker</title>
     </head>
@@ -32,7 +33,7 @@
                             
                             document.querySelector('#budget').classList.toggle('displayNone');
                             document.querySelector('#debt').classList.toggle('displayNone');
-                            window.scroll(0,940);
+                            window.scroll(0,700);
                             setTimeout(function(){
                             document.querySelector('#home').classList.toggle('displayNone');
                             document.querySelector('#nav_debt').classList.toggle('startingPos');
@@ -41,8 +42,11 @@
                             document.querySelector('body').style.overflowY = 'initial';
                             document.querySelector('body').style.overflow = 'initial';
                             // if mobile
+                            if(document.querySelector('#debt').width === 414){
+
+
                             document.querySelector('#debt').style.overflowY = 'scroll';
-                            
+                        }
                             },
                             450);
                             
@@ -59,54 +63,51 @@
                 </div> 
             </div>        
         </div>
-        <div class="nav" id="nav">
-                            <a  id="nav_debt" class="startingPos"
-                            href="javascript:void(0);" 
-                            onclick="
-                            let debt = document.querySelector('#nav_debt');
-                                if(!debt.classList.contains('nav-active')){
-                                    document.querySelector('#debt').classList.toggle('displayNone');
-                             document.querySelector('#nav_debt').classList.toggle('nav-active');
-                             document.querySelector('#nav_budget').classList.toggle('nav-active');
-                             window.scroll(0,940);
-                            setTimeout(function(){
-                                document.querySelector('#budget').classList.toggle('displayNone');
-                            }, 450)
-                                } else if (debt.classList.contains('nav-active')){
-                                
-                            return
-                                }
-
-                            
-                            " 
-                            > Debt
-                            <i class="ion-cash nav_debt-i nav_icon"></i>
-                            </a>
+        <nav class="nav_active">
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links">
+                <li >
+                        <a id="nav_debt"
+                        href="javascript:void(0);" 
+                        onclick="
+                        let debt = document.querySelector('#nav_debt');
+                        if(!debt.classList.contains('nav-active')){
+                        document.querySelector('#debt').classList.toggle('displayNone');
+                        document.querySelector('#nav_debt').classList.toggle('nav-active');
+                        document.querySelector('#nav_budget').classList.toggle('nav-active');
+                        document.querySelector('.nav-links').classList.toggle('open');
+                        setTimeout(function(){
+                        window.scroll(0,0);
+                        document.querySelector('#budget').classList.toggle('displayNone');
                         
-                        
-                            <a id="nav_budget" class="startingPos"
-                            href="javascript:void(0);" 
-                            onclick="
-                            let budget = document.querySelector('#nav_budget');
-                            if(!budget.classList.contains('nav-active')){
-                            document.querySelector('#budget').classList.toggle('displayNone');
-                            document.querySelector('#nav_debt').classList.toggle('nav-active');
-                            document.querySelector('#nav_budget').classList.toggle('nav-active');
-                            window.scroll(0,940);
-                            setTimeout(function(){
-                                
-                                document.querySelector('#debt').classList.toggle('displayNone');
-                            }, 450)
-                            } else{
-                                return
-                            }
 
-                            "
-                            > Budget
-                            <i class="ion-calculator nav_budget-i nav_icon"></i>
-                            
-                            </a>
-        </div>
+                        }, 450)} else if (debt.classList.contains('nav-active')){return}" 
+                        > Debt
+                        <!-- ß -->
+                        </a></li>
+                <li>                        
+                        <a id="nav_budget"
+                        href="javascript:void(0);" 
+                        onclick="
+                        let budget = document.querySelector('#naßv_budget');
+                        if(!budget.classList.contains('nav-active'))
+                        {document.querySelector('#budget').classList.toggle('displayNone');
+                        document.querySelector('#nav_debt').classList.toggle('nav-active');
+                        document.querySelector('#nav_budget').classList.toggle('nav-active');
+                        document.querySelector('.nav-links').classList.toggle('open');
+                        setTimeout(function(){document.querySelector('#debt').classList.toggle('displayNone');
+                         
+                        },200)}else{return}"
+                        >Budget</a></li>
+                        <!-- <i class="ion-calculator nav_budget-i nav_icon"></i> -->
+            </ul>
+                        
+
+            </nav>
 
             
 

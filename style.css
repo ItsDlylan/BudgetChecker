@@ -47,7 +47,6 @@ UNIVERSAL Toggle Class
     height:100vh;
     width: 100%;
     border-bottom: 1px solid black;
-    /* background: linear-gradient(to right, #ff4f49 0%, #ff4f49, 50% 50.05%, black 50.15%, #47b8b1 50.15%, #47B8B1 100%); */
      background: linear-gradient(to right, #ff4f49 50.05%, black 50.10%,  #47b8b1 50.15%); 
 }
 .home__container{
@@ -501,14 +500,91 @@ h2 {
 /* 
     NAV BAR
 */
-.startingPos{
-    left: -140px !important;
+nav{
+    height: 7vh;
+    background: #54dad6;
 }
-.nav_debt-i{
-   color: #FF5049;
+.nav-links{
+    display:flex;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    justify-content: space-around;
+    align-items:center;
+    margin-left: auto;
 }
 
-.nav_budget-i{
+.nav-links li a{
+    color: #FF5049;
+    text-decoration: none;
+}
+@media screen and (max-width: 768px){
+
+    .line{
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+    }
+    nav{
+        position:relative;
+        overflow:hidden;
+        overflow-y: hidden;
+        background: #54dad6;
+    }
+    .nav-links li {
+        margin-bottom: 0;
+    }
+    nav li a {
+        cursor: pointer;
+    }
+    .hamburger{
+        position: absolute;
+        cursor:pointer;
+        right: 5%;
+        top: 50%;
+        transform:translate(-5%, -50%);
+        z-index: 3;
+    }
+    .nav-links{
+        position:fixed;
+        z-index: 2;
+        background: #54dad6;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        pointer-events: none;
+        clip-path: circle(110px at 90% -10%);
+        -webkit-clip-path: circle(110px at 90% -10%);
+        transition: all 1s ease-out;
+    }
+    .nav-links.open{
+        clip-path: circle(1300px at 90% -10%);
+        -webkit-clip-path: circle(1300px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links li {
+        opacity: 0;
+        
+    }
+    .nav-links li a {
+        font-size: 32px;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    li.fade{
+        opacity: 1;
+    }
+}
+/* .nav_debt-i{
+   color: #FF5049;
+} */
+
+/* .nav_budget-i{
     color: black;
 }
 .nav_icon{
@@ -518,8 +594,9 @@ h2 {
     transform: scale(2);
     display: block;
 }
+
 .nav a{
-    position: fixed;
+    position:fixed;
     left: -80px;   
     width: 130px;
     padding: 20px;
@@ -553,7 +630,7 @@ h2 {
 #nav_budget{
     top: 75%;
     background-color: #54dad6;
-}
+} */
 
 
 
@@ -792,9 +869,6 @@ MEDIA QUERIES
  */
 /* setting the imgs on .home to none when the px is less than 1000 */
 @media (max-width: 1000px){
-    body{
-        position:fixed;
-    }
     .home__main{
         margin-right: -30px;
         overflow: hidden;
@@ -987,6 +1061,14 @@ margin-top:10px;
 .item-debt:hover .item__value-debt {transform: translateX(0) !important;}
 .item-debt:hover [class^="item__delete--btn"] { display: inline-block !important; }
 .item-debt:hover .item__dueDate { transform: translateX(0) !important; }
+/* #nav_debt{
+    top:auto;
+    position:static;
+    width: 100px;
+    height: 20px;
+}
+*/
+
 
 
 /* Ending Bracket for media query max-width 415px */
