@@ -940,7 +940,7 @@ MEDIA QUERIES
 
 /* ======== DEBT ========= */
 .debt__top{
-    height: 35vh;}
+    height: 40vh;}
 .debt__top--container{
     position: relative;
     width: auto;
@@ -1068,7 +1068,7 @@ margin-top:10px;
 
 /* Budget Top */
 .top{
-    height: 35vh;
+    height: 40vh;
 }
 .budget__value{
 
