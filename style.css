@@ -897,7 +897,7 @@ MEDIA QUERIES
             overflow-y:hidden;}
             /* if using the viewport meta tag overflow and overflow-y on the body/html elements do not get seen so must be used on a wrapper. */
 .budget-container, .debt-container{
-    overflow-y: scroll;
+    overflow: scroll;
     overflow-x:hidden;
 }
 /* ======= HOME ========= */
