@@ -70,7 +70,7 @@
                 <div class="line"></div>
             </div>
             <ul class="nav-links">
-                <li class="">
+                <li>
                         <a id="nav_debt"
                         href="javascript:void(0);" 
                         onclick="
@@ -98,9 +98,11 @@
                         <a id="nav_budget"
                         href="javascript:void(0);" 
                         onclick="
+                       
                         let budget = document.querySelector('#nav_budget');
                         if(!budget.classList.contains('nav-active'))
                         {document.querySelector('#budget').classList.toggle('displayNone');
+                        document.querySelector('#debt').classList.toggle('displayNone');
                         document.querySelector('#nav_debt').classList.toggle('nav-active');
                         document.querySelector('#nav_budget').classList.toggle('nav-active');
                         document.querySelector('.nav-links').classList.toggle('open');
@@ -108,9 +110,9 @@
                         links.forEach(link =>{
                         link.classList.toggle('fade');
                             });
-                        setTimeout(function(){document.querySelector('#debt').classList.toggle('displayNone');
+                        setTimeout(function(){
                         document.querySelectorAll('nav-links li a').classList.toggle('nav-active');
-                        },200)}else{return}"
+                        },600)}else{return}"
                         >Budget</a></li>
                         <!-- <i class="ion-calculator nav_budget-i nav_icon"></i> -->
             </ul>
@@ -124,16 +126,11 @@
 
         <div class="debt-container displayNone " id="debt">
             <div class="debt__top">
-
-
-
                 <div class="debt__top--container">
                     <div class="debt__title">
                         Total Amount of Debt in <span class="debt__title--month">%Month%</span>:
                     </div>
-                    
                     <div class="debt__value"> - 14,956.24</div>
-                    
                     <div class="debt__cards clearfix">
                         <div class="debt__top--left">
                             <div class="debt__left__monthly__payment"><span class="debt__left--title">Monthly Payment</span>
@@ -257,7 +254,7 @@
                         <h2 class="expenses__title">Expenses</h2>
 
 
-                        <div class="expenses__list">
+                        <div class="expenses__list ">
 
                         </div>
                     </div>

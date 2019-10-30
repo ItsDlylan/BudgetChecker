@@ -501,7 +501,7 @@ h2 {
     NAV BAR
 */
 nav{
-    height: 7vh;
+    height: 5vh;
     background: #54dad6;
 }
 .nav-links{
@@ -656,7 +656,7 @@ nav{
 .debt__top--container{
     position: absolute;
     width: 350px;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
@@ -940,8 +940,7 @@ MEDIA QUERIES
 
 /* ======== DEBT ========= */
 .debt__top{
-    height: 50vh;}
-
+    height: 35vh;}
 .debt__top--container{
     position: relative;
     width: auto;
@@ -999,7 +998,9 @@ margin-top:10px;
 }
 .add__description-debt{
     font-size: 16px;
-    margin-left: 1.5%;
+    margin-left: 2.5%;
+    width: 95%;
+    margin-right: 2.5%;
     margin-top:10px;
 }
 .add__description-debt::placeholder, .add__value::placeholder, .total__due::placeholder, .add__title::placeholder{
@@ -1013,13 +1014,12 @@ margin-top:10px;
 
 .debt__btn{
     font-size: 40px;
-    position:relative;
-    left:44vw;
+    /* position:relative;
+    left:44vw; */
     margin-top: 3%;
 }
 .debt__list{
     overflow-x:hidden;
-    overflow:scroll;
 }
 .item-debt{
     width: 414px;
@@ -1059,71 +1059,102 @@ margin-top:10px;
  .item__delete--btn-debt{
     display:inline-block;
     position:relative;
-
-    
 }
 .item-debt:hover .item__value-debt {transform: translateX(0) !important;}
 .item-debt:hover [class^="item__delete--btn"] { display: inline-block !important; }
 .item-debt:hover .item__dueDate { transform: translateX(0) !important; }
-/* #nav_debt{
-    top:auto;
-    position:static;
-    width: 100px;
-    height: 20px;
+
+/* End of Debt */
+
+/* Budget Top */
+.top{
+    height: 35vh;
 }
-*/
+.budget__value{
 
-
-
+    font-weight: 400;
+}
+.budget__income--text, .budget__expenses--text{
+    font-size:16px;
+}
+.budget__income-value, .budget__expenses--value{
+    font-size:18px;
+}
+.budget__expenses--percentage{
+    font-size: 14px;
+}
+/* Budget Form */
+.add__container{
+    text-align:center;
+}
+.add__description{
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    margin-top: 10px;
+    text-align:center;
+    width: 97.5%;
+}
+.add__value{
+    width: 50%;
+    margin-right: 25%;
+    margin-left: 25%;
+}
+/* budget delete-btn display inline block */
+.item__delete--btn{
+    display: inline-block;
+}
+/* Budget list (Income) */
+.income, .expenses{
+    width: 95%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+}
+h2{
+    margin-top:15px;
+}
+.income__title{
+    text-align: center;
+    width: 97%;
+    margin-right: 1.5%;
+    margin-left: 1.5%;
+    color: #54dad6;
+}
+.item__delete--btn:active { transform: translateY(0px); }
+.item:hover .item__value { transform: translateX(-0px); }
+.item:hover .item__percentage { transform: translateX(-0px); }
+.item__delete--btn i {
+    font-size: 32px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.item__description{
+    margin-top: 6px;
+}
+/* Budget List (Expense) */
+.expenses__title{
+    width: 97%;
+    margin-right: 1.5%;
+    margin-left: 1.5%;
+    margin-top: 5vh;}
+.item__percentage{
+    float: left;
+    margin-left: 20px;
+    margin-top: 4px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+    font-size: 13px;
+    background-color: #FFDAD9;
+    padding: 5px;
+    border-radius: 3px;
+    width: 42px;
+    text-align: center;
+}
+.item__value{
+    margin-top:6px;
+}
+.mobile__expenses__value{
+   
+}
+    
 /* Ending Bracket for media query max-width 415px */
 }
-
-/* 1792x828px at 326ppi */
-/* Iphone 11 iphone XR  */
-@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
-        body{
-            width: 414px;
-            height:896px;
-            position: fixed;
-
-        }
-        .home__right{
-            width: auto;
-        }
-        .home{
-            height: 100vh;
-            width:100%;
-            overflow:hidden;
-            overflow-y:hidden;
-        }
-        .home__left--main-text {
-            position: absolute;
-            top: 135px;
-            width: 250px;
-            left: 65px;
-            font-size: 38px;
-            line-height: 38px;
-            text-align: center;
-        }
-        .home__left--calculate-btn{
-        background: #FF5049;
-        position: relative;
-        left: 60px;
-        
-        top: 500px;
-        font-size: 25px;
-        }
-        .home__left--sub-text{
-            width: 300px;
-            position: relative;
-            left: 7.5%;
-            top: 394px;
-            height: 75px;
-            font-family: Open Sans;
-            font-weight: 300;
-            font-size: 24px;
-            text-transform: none;
-            line-height: 32px;
-        }
-     }
-
