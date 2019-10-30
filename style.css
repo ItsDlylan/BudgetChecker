@@ -872,7 +872,7 @@ MEDIA QUERIES
 
  */
 /* setting the imgs on .home to none when the px is less than 1000 */
-@media (max-width: 1000px){
+@media only screen and (max-width: 1024px){
     .home__main{
         margin-right: -30px;
         overflow: hidden;
@@ -888,7 +888,10 @@ MEDIA QUERIES
         display:none;
     }
 }
-@media screen and (max-width: 414px){ 
+@media only screen and (max-device-width: 768px ){
+    /* Ipad / Tablet */
+}
+@media only screen and (max-device-width: 414px){ 
         body{
             width: 414px;
             height:100vh;
