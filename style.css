@@ -1133,6 +1133,9 @@ h2{
 .item__description{
     margin-top: 6px;
 }
+.expenses__list, .income__list{
+    height:50vh;
+}
 /* Budget List (Expense) */
 .expenses__title{
     width: 97%;
