@@ -888,7 +888,7 @@ MEDIA QUERIES
         display:none;
     }
 }
-@media  (max-width: 414px){ 
+@media screen and (max-width: 414px){ 
         body{
             width: 414px;
             height:100vh;
@@ -1082,6 +1082,9 @@ margin-top:10px;
 }
 .budget__expenses--percentage{
     font-size: 14px;
+}
+.budget__title{
+    font-size:20px;
 }
 /* Budget Form */
 .add__container{
