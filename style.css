@@ -888,10 +888,25 @@ MEDIA QUERIES
         display:none;
     }
 }
-@media only screen and (max-device-width: 768px ){
+@media only screen and (max-width: 768px ){
     /* Ipad / Tablet */
 }
-@media only screen and (max-device-width: 414px){ 
+@media only screen and (min-width: 375px) {
+    /* iphone 6,7,8 */
+
+    /* === Home === */
+    #home__title{
+        top:30px !important;
+        left: 200px !important;
+    }
+    .home{
+        width: 100vw !important;
+    }
+    .home__left--main-text{
+        left:60px !important;
+    }
+}
+@media only screen and (max-width: 414px){ 
         body{
             width: 414px;
             height:100vh;
