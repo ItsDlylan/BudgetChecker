@@ -405,7 +405,10 @@ END OF HOME
     width: 1000px;
     margin: 60px auto;
 }
-
+.income__title{
+    color: #54dad6;
+    text-align:center;
+}
 .income {
     float: left;
     width: 475px;
@@ -424,7 +427,7 @@ h2 {
     margin-bottom: 15px;
 }
 
-.icome__title { color: #54dad6; text-align: center;}
+.income__title { color: #54dad6; text-align: center;}
 .expenses__title { color: #FF5049; text-align: center;}
 
 .item {
@@ -512,6 +515,10 @@ nav{
     justify-content: space-around;
     align-items:center;
     margin-left: auto;
+    
+}
+.nav-links li a:hover{
+    cursor:pointer;
 }
 
 .nav-links li a{
@@ -581,68 +588,9 @@ nav{
         transition: all 0.5s ease 0.4s;
     }
     li.fade{
-        opacity: 1;
+        opacity: 1;}
+/* End of media Quiery */
     }
-}
-/* .nav_debt-i{
-   color: #FF5049;
-} */
-
-/* .nav_budget-i{
-    color: black;
-}
-.nav_icon{
-    position: absolute;
-    left: 73.5%;
-    top: 30%;
-    transform: scale(2);
-    display: block;
-}
-
-.nav a{
-    position:fixed;
-    left: -80px;   
-    width: 130px;
-    padding: 20px;
-    transition: 0.3s ease;
-    text-decoration: none;
-    border: 1px solid #54dad6;
-    font-size: 18px;
-    color:#000;
-    border-radius: 0 5px 5px 0;
-    z-index: 3;
-}
-.nav-active{
-    border-right: 1px solid black !important;
-    border-top: 1px solid black !important;
-    border-bottom: 1px solid black !important;
-}
-.nav a:hover{
-    left: 0;
-    cursor:pointer;
-}
-
-#nav_home{
-    
-    top: 55%;
-    background-color: #54dad6;
-}
-#nav_debt{
-    top: 65%;
-    background-color: #54dad6;
-}
-#nav_budget{
-    top: 75%;
-    background-color: #54dad6;
-} */
-
-
-
-
-
-/* 
-    Debt Page
-*/
 
 
 /* Top */
@@ -651,34 +599,28 @@ nav{
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(back.png);
     background-size: cover;
     background-position: center;
-    position: relative;
-}
+    position: relative;}
 .debt__top--container{
     position: absolute;
     width: 350px;
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff;
-}
-
+    color: #fff;}
 .debt__title{
     font-size: 18px;
     text-align: center;
     margin-bottom: 10px;
-    font-weight: 300;
-}
+    font-weight: 300;}
 .debt__value{
     font-weight: 300;
     font-size: 46px;
     text-align: center;
     margin-bottom: 25px;
     letter-spacing: 2px;
-    color: #FF5049;
-}
+    color: #FF5049;}
 .debt__cards{
-   display: inline;
-}
+   display: inline;}
 .debt__top--left,
 .debt__top--right{
     position: absolute;
@@ -686,36 +628,28 @@ nav{
     margin-top: -3px;
     width: 100%;
     background-color: #FF5049;
-    height: 90px;
-}
+    height: 90px;}
 .debt__top--left{
-    right: 11vw;
-}
+    right: 11vw;}
 .debt__top--right{
-    left: 11vw;
-}
+    left: 11vw;}
 .debt__left__monthly__payment,
 .debt__months__free{
-    text-align: center;
-}
+    text-align: center;}
 .debt__months__free__disclaimer{
     font-size: 10px;
     position: absolute;
     /* right: 50%; */
     top: 80%;
     left: 0;
-    width:100%;
-}
+    width:100%;}
 .debt__top--right__start{
     position: absolute;
     display: inline-block;
     width: 100%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
+    transform: translate(-50%, -50%);}
 .debt__monthly--total{
     position: absolute;
     color: black;
@@ -723,61 +657,46 @@ nav{
     display: inline;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-}
-
+    transform: translate(-50%, -50%);}
 .debt__left--title{
     position:absolute;
     top:0;
     left:0;
-    width:100%;
-}
+    width:100%;}
 .debt__monthly--end{
     position: absolute;
     top:75%;
     left:0;
-    width:100%;
-}
-
+    width:100%;}
 .debt__right--months{
     color: black;
     top: 1px;
-    position: relative;
-}
-
+    position: relative;}
 .due__date--label{
     position:absolute;
     top: 40.5%;
-    left: 64.5%;
-}
+    left: 64.5%;}
 .due__date::before{ 
     content: "Due Date: ";
     position: relative;
     left:10px;
     top: 0px;
     margin-right: 12px; 
-    color:black;
-}
+    color:black;}
 #dueDate{
-    width:18%;
-}
-
+    width:18%;}
 .add__title:focus,
 .add__description-debt:focus,
 .total__due:focus,
 .due__date:focus {
     outline: none;
-    border: 1px solid #FF5049;
-    
-}
+    border: 1px solid #FF5049;}
 .add__title:hover,
 .add__description-debt:hover,
 .total__due:hover,
 .due__date:hover,
 .debt__btn i:hover{
-    cursor: pointer;
-}
-
+    cursor: pointer;}
 .debt__btn{
     font-size: 35px;
     background: none;
@@ -788,8 +707,7 @@ nav{
     vertical-align: middle;
     line-height: 1.1;
     margin-left: 10px;
-    outline:none;
-}
+    outline:none;}
 .debt__btn:active { outline: none; transform: translateY(2px); }
 /* Bottom Debt */
 .debt__bottom-title{
@@ -798,27 +716,20 @@ nav{
 font-weight: normal;
 font-size: 26px;
 line-height: 30px;
-color: #FF5049;
-}
+color: #FF5049;}
 .item-debt {
     padding: 13px;
-    border-bottom: 1px solid #e7e7e7;
-}
-
+    border-bottom: 1px solid #e7e7e7;}
 .item-debt:first-child { border-top: 1px solid #FF5049; }
 .item-debt:nth-child(even) { background-color: #f7f7f7; }
 .item__title{
     width: 25%;
     position: relative;
-    bottom: -20px;
-}
-
+    bottom: -20px;}
 .middle{
     width: 33%;
     position: relative;
-    left: 40%;
-}
-
+    left: 40%;}
 .debt-item__description{
     text-align: center;
     width: 300px;
@@ -826,23 +737,18 @@ color: #FF5049;
     position: relative;
     top: -30px;
     right: 55px;
-    color: black;
-}
-
+    color: black;}
 .item__total{
     height: 10px;
     position: relative;
     top: 10px;
     left: 60px;
-    color: #FF5049;
-}
+    color: #FF5049;}
 .debt__item-right{
-    float: right;
-}
+    float: right;}
 .item__dueDate{
     display: inline-block;
-    transition: transform 0.3s;
-}
+    transition: transform 0.3s;}
 .item__value-debt{
     position: relative;
     color: #FF5049;
@@ -850,20 +756,16 @@ color: #FF5049;
     left: 102px;
     top: -45px;
     transition: transform 0.3s;
-    float: left;
-
-}
+    float: left;}
 .item__delete-debt{
     position: relative;
     bottom: 27px;
-    left: 107px;
-}
+    left: 107px;}
 .item__delete--btn-debt{
-    color: #FF5049 !important;
-}
-.item-debt:hover .item__delete--btn { display: inline-block; }
-.item-debt:hover .item__dueDate { transform: translateX(-22px); }
-.item-debt:hover .item__value-debt { transform: translateX(-22px); }
+    color: #FF5049 !important;}
+.item-debt:hover .item__delete--btn-debt { display: inline-block; }
+.item-debt:hover .item__dueDate { transform: translateX(-50px); }
+.item-debt:hover .item__value-debt { transform: translateX(-50px); }
 
 
 /* 
@@ -871,27 +773,9 @@ color: #FF5049;
 MEDIA QUERIES
 
  */
-/* setting the imgs on .home to none when the px is less than 1000 */
-@media only screen and (max-width: 1024px){
-    .home__main{
-        margin-right: -30px;
-        overflow: hidden;
-        overflow-y:hidden;
-    }
-    .home__title{
-        left: 210px;
-        font-size: 30px;
-        line-height: 27px;
-        top:40px;
-    }
-    .home__savings-svg, .home__left--pie{
-        display:none;
-    }
-}
-@media only screen and (max-width: 768px ){
-    /* Ipad / Tablet */
-}
-@media only screen and (min-width: 375px) {
+
+
+@media only screen and (min-width: 350px) and (max-width: 375px) {
     /* iphone 6,7,8 */
 
     /* === Home === */
@@ -905,10 +789,102 @@ MEDIA QUERIES
     .home__left--main-text{
         left:60px !important;
     }
+    .home__left--sub-text{
+        left: 18.5% !important;
+    }
+    .home__left--calculate-btn{
+        left: 52px !important;
+    }
+    .home__left--calculate-btn{
+        top: 450px !important;
+
+    }
+
+    .debt__top--container{
+        margin-top: 0;
+    }
+
+    /* nav */
+    nav{
+        width:375px;
+    }
+
+    /* DEBT */
+
+    /* Debt Top */
+    .debt__top{
+        height: 50vh !important;
+    }
+    .debt__title {
+    width: 375px !important;
+    font-size: 18px !important;
+    }
+    .debt__value{
+        width: 375px !important;
+        margin-top: 9% !important;
+    }
+    .debt__top--left{
+        width: 45% !important;
+        right: 0vw !important;
+        height: 30% !important;
+    }
+    .debt__top--right{
+        height: 30% !important;
+    }
+    .add__container{
+        width:100vw;
+        margin-left: 0;
+    }
+    /* Debt Form */
+    .add__description-debt{
+        width: 90% !important;
+    }
+
+
+    /* Debt Bottom */
+    .debt{
+        width:100vw;
+    }
+
+
+
+    /* Budget */
+    .income__title, .income__list, .expenses, .expenses__list{
+        width:100vw !important;
+    }
+
+    .income, .expenses{
+        width: 100vw !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+    .expenses{
+        margin-bottom: 5vh;
+    }
+    .item__delete--btn i{
+    margin-right: 25px !important;
+    }
+    .income__title, .expenses__title{
+        margin-left: -2.5% !important;
+    }
+    /* End of Media QUery min-width: 375Px */
+}
+/* Fixing Position of Home__title for iphone 6 users. */
+@media only screen and (max-width: 350px) and (min-width: 350px){
+    #home__title{
+        left: 178px !important;
+    }
+    .expenses{
+        margin-bottom: 5vh;
+    }
+    .budget__income--text, .budget__expenses--text{
+        font-size: 18px;
+    margin-left: 10px;
+    }
 }
 @media only screen and (max-width: 414px){ 
         body{
-            width: 414px;
+            width: 100vw;
             height:100vh;
             position: fixed;
             overflow:hidden;
@@ -918,10 +894,13 @@ MEDIA QUERIES
     overflow: scroll;
     overflow-x:hidden;
 }
+.debt__top--container{
+    margin-top: 0;
+}
 /* ======= HOME ========= */
         .home{
             height:100%;
-            width:414px;}
+            width:100vw;}
         #home__title{
             position: absolute;
             height: 60px;
@@ -971,10 +950,13 @@ MEDIA QUERIES
     padding-top: 15%;
     font-size: 20px;
     position: relative;
-    width: 414px;}
-
+    width: 100vw;
+}
+.expenses{
+    margin-bottom: 5vh;
+}
 .debt__value{
-    width: 414px;
+    width: 100vw;
     margin-top: 10%;
     margin-bottom: 10%;}
 
@@ -1040,7 +1022,7 @@ margin-top:10px;
     overflow-x:hidden;
 }
 .item-debt{
-    width: 414px;
+    width:100vw;
     overflow-x:hidden;
 }
 .container{
@@ -1066,8 +1048,8 @@ margin-top:10px;
     top: 12px;
 }
 .item__value-debt{
-    left: 80px;
-    top: -63px;
+    left: 89px;
+    top: -65px;
 }
 .item__delete-debt{
     bottom: 65px;
@@ -1144,15 +1126,15 @@ h2{
 .item:hover .item__value { transform: translateX(-0px); }
 .item:hover .item__percentage { transform: translateX(-0px); }
 .item__delete--btn i {
-    font-size: 32px;
+    font-size: 26px;
     margin-left: 10px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 .item__description{
     margin-top: 6px;
 }
 .expenses__list, .income__list{
-    height:50vh;
+    height: 20vh;
 }
 /* Budget List (Expense) */
 .expenses__title{
@@ -1184,4 +1166,316 @@ h2{
     overflow-x: hidden;
 }
 /* Ending Bracket for media query max-width 415px */
+}
+@media only screen and (max-width: 768px ) and (min-width: 700px){
+    /* Ipad / Tablet */
+    /* Home */
+    body{
+        overflow-x:hidden;
+    }
+    .home__title{
+        height:58px !important;
+        left:initial;
+    }
+    .home__left--main-text{
+        width: 553px;
+        left: 115px;
+        top: 140px;
+    }
+    .home__left--sub-text{
+        width: 561px;
+        height: 153px;
+        position: absolute;
+        left: 115px;
+        top: 475px;
+        font-family: Open Sans;
+        font-weight: 300;
+        font-size: 35px;
+    }
+    .home__left--calculate-btn{
+        width: 303px;
+        height: 82.72px;
+        left: 230px;
+        top: 661px;
+        background: #FF5049;}
+
+    /* Debt */
+    .debt-container{
+        overflow-x:initial;
+        overflow:initial
+    }
+    .debt__top{
+        width: 100vw;}
+    .debt__title{
+        font-size: 20px;
+        width: 400px;
+        position: relative;
+        right: 20px;}
+
+    .debt__top--left, .debt__top--right{
+        width:72%;}
+    .debt__top--left{
+        right: 29vw;}
+    .debt__top--right{
+        left: 29vw;}
+    .debt__top--container{
+        margin-top: 20px;
+    }
+
+    /* Debt Form */
+    .add__title{
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    margin-top: 5px;
+        width: 35%;}
+    .add__description-debt{    
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        width: 75%;
+        text-align: center;}
+    .total__due{
+        display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 29%;
+    text-align: center;}
+    .due__date{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        width: 40% !important;
+    }
+    .debt__btn{
+        margin-left: 0;
+    }
+
+    /* Debt Bottom/List */
+    .debt{
+        width:100vw;
+    }
+    .item-debt{
+        font-size: 18px;
+    }
+
+    .debt-item__description{
+        right: 75px;
+    }
+    .item__total{
+        left:40px;
+    }
+
+    .item__dueDate{
+        position: relative;
+    right: 80px;
+    width:140px;
+    }
+    .item__value-debt{
+        left:95px;
+        top: -61px;
+    }
+    .item__title{
+        bottom: -24px;
+        font-size: 22px;
+        font-weight: 800;
+    }
+    .item__delete--btn-debt i{
+        font-size:32px;
+    }
+
+
+
+    /* Budget */
+    .income__title{
+        text-align:center;
+        color: #54dad6;}
+    .income, .expenses{
+        float: left;
+    width: 35%;}
+
+    .income{    margin-right: 1%;
+        margin-left: 2.3%;}
+        
+    .item__delete--btn {
+            margin-top: -4px;
+            margin-left: 13px;
+            font-size: 25px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 0;}
+/* End of Media Quiery */
+}
+
+/* setting the imgs on .home to none when the px is less than 1000 */
+@media only screen and (min-width: 992px) and (max-width: 992px) {
+    .home__savings-svg, .home__left--pie{
+        display:none;
+    }
+    .home__main{
+        margin-right: -30px;
+        overflow: hidden;
+        overflow-y:hidden;
+    }
+    .home__title{
+        font-size: 36px !important;
+        line-height: 33px;
+        top:40px;
+    }
+    .home__left--main-text{
+        left: 200px;
+        top: 160px;
+    }
+    .home__left--sub-text{
+        left: 220px;
+    top: 500px;
+    font-family: Open Sans;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 34px;
+    }
+    .home__left--calculate-btn{
+        left: 350px;
+        top: 650px;}
+    
+    /* Debt Page */
+
+    /* Debt Top */
+    .debt__top--container{
+        width: 400px;
+    }
+    .debt__title{
+        font-size: 21px;
+    }
+    .debt__top--left{
+        right: 250px;
+    }
+    .debt__top--right{
+        left:63% !important;
+    }
+    /* Debt Form */
+
+    .add__title{
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    margin-top: 5px;
+        width: 28%;}
+    .add__description-debt{    
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        width: 55%;
+        text-align: center;}
+    .total__due{
+        display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 23%;
+    text-align: center;}
+    .due__date{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        width: 30% !important;
+    }
+    .debt__btn{
+        margin-left: 0;
+    }
+    .debt{
+        width:100vw;
+    }
+    .item-debt{
+        font-size: 18px;
+    }
+
+    .debt-item__description{
+        right: 55px;
+    }
+    .item__total{
+        left:54px;
+    }
+
+    .item__dueDate{
+        position: relative;
+    right: 80px;
+    width:140px;
+    }
+    .item__value-debt{
+        left: 81px;
+        top: -61px;
+    }
+    .item__title{
+        bottom: -24px;
+        font-size: 22px;
+        font-weight: 800;
+    }
+    .item__delete--btn-debt{
+        font-size:32px;
+        display:inline-block !important;
+    }
+
+
+    /* Budget */
+    .income__title{
+        text-align:center;
+        color: #54dad6;}
+    .income, .expenses{
+        float: left;
+    width: 45%;}
+
+    .income{    margin-right: 1%;
+        margin-left: 3.6%;
+    }
+        
+    .item__delete--btn {
+            margin-top: -4px;
+            margin-left: 13px;
+            font-size: 25px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 0;}
+}
+
+@media only screen and (max-width: 991px){
+    .home__title{
+        font-size: 30px;
+        line-height: 27px;
+    }
+    .home__savings-svg, .home__left--pie{
+        display:none;
+    }
+}
+@media only screen and (min-width: 993px) and (max-width:1050px){
+    .home__savings-svg, .home__left--pie{
+        display:block;
+    }
+    .income__title{
+        text-align:center;
+        color: #54dad6;}
+    .income, .expenses{
+        float: left;
+    width: 45%;}
+
+    .income{    margin-right: 1%;
+        margin-left: 3.6%;
+    }
+        
+
 }
