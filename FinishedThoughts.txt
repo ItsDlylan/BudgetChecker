@@ -17,3 +17,4 @@ animation of the page.
 3) Learn Local Storage and turn all the info into local storage 
 in case of a refresh
 4) add a printable option
+5) Remake Media Queries (ties into 1)
