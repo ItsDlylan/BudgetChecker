@@ -1,0 +1,19 @@
+Troubles Had while working through this project were:
+Functionality: Adding a whole new page with its own logic following the
+budget page's data model, I had to figure out how to grab the 
+input type="month"'s value and split it into its own array to grab
+the month and year that was inputed. 
+
+Learned how to pause scrolling to make a single page web app
+
+UI: I force placed every div with position absolute, I now realize how terrible
+that actually can be with making it responsive like holy shit, did it make me want to die.
+
+
+Things I will do better when I come back and refactor.
+1) new UI I want to redesign past Jonas's design.
+2) Turn it into a react app for states with animations for the scrolling 
+animation of the page.
+3) Learn Local Storage and turn all the info into local storage 
+in case of a refresh
+4) add a printable option
